@@ -1,0 +1,59 @@
+name: Audit catalogue URLs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 1 * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: catalogue-url-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: automation/catalogue-url-audit
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check every catalogue URL
+        run: npm run audit:urls
+      - name: Validate updated resource records
+        run: npm test
+      - name: Prepare URL audit pull request
+        id: changes
+        run: |
+          if git diff --quiet -- resources; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$BRANCH_NAME"
+          git add resources
+          git commit -m "Update catalogue URL review issues"
+          git push --force origin "$BRANCH_NAME"
+      - name: Open the URL audit pull request
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          existing_url="$(gh pr list --head "$BRANCH_NAME" --state open --json url --jq '.[0].url')"
+          if [ -z "$existing_url" ]; then
+            gh pr create \
+              --base main \
+              --head "$BRANCH_NAME" \
+              --title "Update catalogue URL review issues" \
+              --body "The monthly URL audit updated automatically managed \`review.issues\` entries. Definite stale results require human review; temporary failures and sites that restrict automated access were reported only as workflow warnings."
+          fi

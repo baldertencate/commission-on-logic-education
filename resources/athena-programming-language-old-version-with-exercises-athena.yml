@@ -43,3 +43,4 @@ review:
   needsReview: true
   issues:
     - 'Clarify the source value for external software: "NoYes".'
+    - "URL audit: https://athena-lang.org/ appears stale (the hostname does not exist)."

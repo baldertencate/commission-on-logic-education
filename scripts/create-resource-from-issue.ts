@@ -1,6 +1,10 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { buildResourceSuggestion, ROOT } from "./suggestion.js";
+import {
+  assertNoStaleSubmissionUrls,
+  checkSubmittedUrls,
+} from "./submission-url-check.js";
 
 type IssueEvent = {
   issue?: {
@@ -27,6 +31,15 @@ try {
     issueUrl: issue.html_url,
     createdAt: issue.created_at,
   });
+  const resource = generated.resource as {
+    url: string;
+    alternateUrls?: string[];
+  };
+  const urlResults = await checkSubmittedUrls([
+    resource.url,
+    ...(resource.alternateUrls ?? []),
+  ]);
+  assertNoStaleSubmissionUrls(urlResults);
 
   const destination = path.join(ROOT, generated.relativeFile);
   await fs.writeFile(destination, generated.yaml);

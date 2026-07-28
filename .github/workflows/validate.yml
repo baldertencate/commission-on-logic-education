@@ -14,11 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Check URLs in newly submitted resources
+        if: github.event_name == 'pull_request'
+        run: npm run check:submitted-urls -- --base "${{ github.event.pull_request.base.sha }}"
       - run: npm test
       - run: npm run build
       - run: npm run build:site
