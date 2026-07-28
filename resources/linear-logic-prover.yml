@@ -30,6 +30,7 @@ notes: |-
   Also, more on linear logic:
   http://www.lcc.uma.es/~lopez/linear.html
   Site includes user’s guide
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

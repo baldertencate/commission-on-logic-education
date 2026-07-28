@@ -10,7 +10,7 @@ page.
 
 ```text
 resources/                   One reviewed YAML file per resource
-taxonomy/                    Controlled vocabularies used by resources
+taxonomy/                    Controlled vocabularies for types, topics, and audiences
 schema/resource.schema.json  Shared resource schema
 schema/catalogue.schema.json Schema for the generated catalogue
 scripts/                     Import, validation, and build tools

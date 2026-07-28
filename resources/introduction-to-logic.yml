@@ -28,6 +28,7 @@ access:
   requiresSoftware: false
 status: unknown
 notes: These webpages are no longer maintained and appear here as an unsupported resource only.
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

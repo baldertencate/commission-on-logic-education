@@ -17,7 +17,7 @@ type Resource = {
   alternateUrls?: string[];
   types: string[];
   topics: string[];
-  languages: string[];
+  languages?: string[];
   audiences: string[];
 };
 
@@ -52,7 +52,7 @@ for (const file of files) {
   else entries.push({ file, resource: value as Resource });
 }
 
-const taxonomyNames = ["resource-types", "topics", "languages", "audiences"] as const;
+const taxonomyNames = ["resource-types", "topics", "audiences"] as const;
 const taxonomyIds = new Map<string, Set<string>>();
 for (const name of taxonomyNames) {
   const items = await readTaxonomy(name);
@@ -89,7 +89,6 @@ for (const { file, resource } of entries) {
   const references: Array<[keyof Resource, string]> = [
     ["types", "resource-types"],
     ["topics", "topics"],
-    ["languages", "languages"],
     ["audiences", "audiences"],
   ];
   for (const [field, taxonomy] of references) {

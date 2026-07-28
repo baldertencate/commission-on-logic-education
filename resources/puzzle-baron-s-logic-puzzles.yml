@@ -23,6 +23,7 @@ access:
     - online
   requiresSoftware: false
 status: unknown
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: University of Michigan Library – Philosophy – Logic Resources

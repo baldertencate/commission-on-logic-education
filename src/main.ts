@@ -17,7 +17,7 @@ type Resource = {
   features?: string[];
   types: string[];
   topics: string[];
-  languages: string[];
+  languages?: string[];
   audiences: string[];
   authors?: string[];
   access: Access;
@@ -80,18 +80,25 @@ function appendHighlightedText(parent: HTMLElement, text: string, terms: string[
 }
 
 function label(value: string): string {
-  const languageLabels: Record<string, string> = {
-    en: "English",
-    es: "Spanish",
-    fr: "French",
-    de: "German",
-    nl: "Dutch",
-    mul: "Multilingual",
-  };
-  return languageLabels[value] ?? value
+  return value
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
+}
+
+function languageLabel(value: string): string {
+  const specialLabels: Record<string, string> = {
+    mul: "Multilingual",
+    und: "Undetermined language",
+    zxx: "Language-independent",
+  };
+  if (specialLabels[value]) return specialLabels[value];
+
+  try {
+    return new Intl.DisplayNames(["en"], { type: "language" }).of(value) ?? value;
+  } catch {
+    return value;
+  }
 }
 
 function element<K extends keyof HTMLElementTagNameMap>(
@@ -116,7 +123,9 @@ function buildChipList(resource: Resource, terms: string[]): HTMLDivElement {
 function buildMetadata(resource: Resource, terms: string[]): HTMLDListElement {
   const rows: Array<[string, string]> = [];
   if (resource.authors?.length) rows.push(["By", resource.authors.join("; ")]);
-  rows.push(["Language", resource.languages.map(label).join(", ")]);
+  if (resource.languages?.length) {
+    rows.push(["Language", resource.languages.map(languageLabel).join(", ")]);
+  }
 
   const access = [
     ...resource.access.mode.map(label),

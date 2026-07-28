@@ -14,6 +14,10 @@ const issueBody = `
 
 Example Logic Laboratory
 
+### ${suggestionHeadings.maintainerEmail}
+
+maintainer@example.test
+
 ### ${suggestionHeadings.url}
 
 https://example.test/logic-laboratory
@@ -34,7 +38,8 @@ An interactive collection of exercises for introductory logic.
 
 ### ${suggestionHeadings.languages}
 
-English
+en
+es
 
 ### ${suggestionHeadings.audiences}
 
@@ -79,6 +84,7 @@ _No response_
 ### Final checks
 
 - [x] I checked that this resource is not already in the catalogue.
+- [x] I agree to periodic maintenance contact, including about stale URLs, and understand that the maintainer email will be stored with the record in the public GitHub repository and generated catalogue data.
 `;
 
 const fields = parseIssueForm(issueBody);
@@ -93,6 +99,7 @@ const generated = await buildResourceSuggestion({
 });
 const resource = generated.resource as {
   id: string;
+  maintainerEmail: string;
   types: string[];
   topics: string[];
   authors: string[];
@@ -106,6 +113,7 @@ const resource = generated.resource as {
 };
 
 assert.equal(resource.id, "example-logic-laboratory");
+assert.equal(resource.maintainerEmail, "maintainer@example.test");
 assert.deepEqual(resource.types, ["course", "website"]);
 assert.deepEqual(resource.topics, ["propositional-logic", "modal-logic"]);
 assert.deepEqual(resource.authors, ["Example University", "Ada Example"]);
@@ -121,8 +129,11 @@ type IssueForm = {
     type: string;
     attributes?: {
       label?: string;
-      options?: string[];
+      options?: Array<string | { label: string; required?: boolean }>;
       multiple?: boolean;
+    };
+    validations?: {
+      required?: boolean;
     };
   }>;
 };
@@ -135,13 +146,14 @@ function formOptions(label: string): string[] {
   const field = issueForm.body.find((item) => item.attributes?.label === label);
   assert.equal(field?.type, "dropdown", `${label} must be a dropdown`);
   assert.equal(field?.attributes?.multiple, true, `${label} must allow multiple selections`);
-  return field?.attributes?.options ?? [];
+  return (field?.attributes?.options ?? []).filter(
+    (option): option is string => typeof option === "string",
+  );
 }
 
 for (const [label, taxonomy] of [
   [suggestionHeadings.types, "resource-types"],
   [suggestionHeadings.topics, "topics"],
-  [suggestionHeadings.languages, "languages"],
   [suggestionHeadings.audiences, "audiences"],
 ] as const) {
   assert.deepEqual(
@@ -150,5 +162,72 @@ for (const [label, taxonomy] of [
     `${label} options must match taxonomy/${taxonomy}.yml`,
   );
 }
+
+const languageField = issueForm.body.find(
+  (item) => item.attributes?.label === suggestionHeadings.languages,
+);
+assert.equal(languageField?.type, "textarea", "Language codes must be entered as free-form tags");
+
+const maintainerField = issueForm.body.find(
+  (item) => item.attributes?.label === suggestionHeadings.maintainerEmail,
+);
+assert.equal(maintainerField?.type, "input", "Maintainer email must be an input");
+assert.equal(maintainerField?.validations?.required, true, "Maintainer email must be required");
+
+const finalChecks = issueForm.body.find((item) => item.attributes?.label === suggestionHeadings.checks);
+const maintainerCheck = finalChecks?.attributes?.options?.find(
+  (option) => typeof option !== "string" && option.label.startsWith("I agree to periodic"),
+);
+assert.equal(
+  typeof maintainerCheck === "string" ? false : maintainerCheck?.required,
+  true,
+  "Maintainer agreement must be required",
+);
+
+assert.deepEqual(
+  (generated.resource as { languages?: string[] }).languages,
+  ["en", "es"],
+);
+
+const withoutLanguages = await buildResourceSuggestion({
+  body: issueBody.replace("\nen\nes\n", "\n_No response_\n"),
+  issueNumber: 1234,
+  issueUrl: "https://github.com/example/catalogue/issues/1234",
+  createdAt: "2026-07-28T12:00:00Z",
+});
+assert.equal("languages" in withoutLanguages.resource, false);
+
+await assert.rejects(
+  buildResourceSuggestion({
+    body: issueBody.replace("\nen\nes\n", "\nnot_a_language\n"),
+    issueNumber: 1234,
+    issueUrl: "https://github.com/example/catalogue/issues/1234",
+    createdAt: "2026-07-28T12:00:00Z",
+  }),
+  /not a valid language tag/,
+);
+
+await assert.rejects(
+  buildResourceSuggestion({
+    body: issueBody.replace("maintainer@example.test", "unknown"),
+    issueNumber: 1234,
+    issueUrl: "https://github.com/example/catalogue/issues/1234",
+    createdAt: "2026-07-28T12:00:00Z",
+  }),
+  /require a maintainer email address/,
+);
+
+await assert.rejects(
+  buildResourceSuggestion({
+    body: issueBody.replace(
+      "- [x] I agree to periodic maintenance contact",
+      "- [ ] I agree to periodic maintenance contact",
+    ),
+    issueNumber: 1234,
+    issueUrl: "https://github.com/example/catalogue/issues/1234",
+    createdAt: "2026-07-28T12:00:00Z",
+  }),
+  /agreement must be accepted/,
+);
 
 console.log("Resource suggestion generation tests passed.");

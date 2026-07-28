@@ -22,6 +22,7 @@ access:
   requiresSoftware: false
 status: unknown
 notes: Not secured connection.
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Resources on Logic Education

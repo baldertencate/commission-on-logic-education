@@ -32,6 +32,7 @@ status: unknown
 notes: TPS and ETPS run in Common Lisp, and can be used on any system where Common Lisp runs. TPS
   and ETPS have been used extensively under Unix and Linux systems, and to some extent under
   Windows.
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

@@ -5,7 +5,8 @@ Thank you for helping improve the logic education resources catalogue.
 ## Add or edit a resource
 
 Each resource lives in `resources/<id>.yml`. Copy an existing file with similar content, choose a
-stable lowercase ID, and use terms defined in the files under `taxonomy/`.
+stable lowercase ID, and use terms defined in the files under `taxonomy/` for types, topics, and
+audiences.
 
 The filename must equal the resource ID. For example, a resource with `id: logic-in-action` belongs
 in `resources/logic-in-action.yml`.
@@ -37,12 +38,17 @@ features:
 
 The [resource schema](schema/resource.schema.json) is the authoritative definition. In particular:
 
-- `id`, `title`, `url`, `description`, `types`, `topics`, `languages`, `audiences`, `access`,
+- `id`, `title`, `url`, `description`, `maintainerEmail`, `types`, `topics`, `audiences`, `access`,
   `status`, and `provenance` are required.
 - `id` uses lowercase letters, numbers, and single hyphens, and must match the filename.
 - `url` and `alternateUrls` must be complete HTTP or HTTPS URLs.
-- `types`, `topics`, `languages`, and `audiences` may contain only IDs defined under
-  [`taxonomy/`](taxonomy/).
+- `types`, `topics`, and `audiences` may contain only IDs defined under [`taxonomy/`](taxonomy/).
+- `languages`, when known, contains BCP 47 tags such as `en`, `es`, or `pt-BR`. Omit the field when
+  language information is unknown; use `mul` for unspecified multilingual content and `zxx` for
+  language-independent content.
+- `maintainerEmail` contains a valid maintenance contact address. Imported legacy records use
+  `unknown`. Any real address stored here is visible in the public repository and generated
+  catalogue data, even though the catalogue website does not display it.
 - `access.cost` is `free`, `freemium`, `paid`, or `unknown`; `access.mode` contains one or more of
   `online`, `download`, and `physical`.
 - Fields not defined by the schema are rejected.
@@ -50,8 +56,8 @@ The [resource schema](schema/resource.schema.json) is the authoritative definiti
 ## Suggest a new resource
 
 Use the website's **Suggest a new resource** action. The resulting GitHub form uses the catalogue's
-controlled vocabulary and collects everything required by the schema; contributors do not need to
-write YAML.
+controlled vocabulary and collects everything required by the schema, including a maintainer email
+and agreement to periodic maintenance contact; contributors do not need to write YAML.
 
 When the form is submitted, the `Turn resource suggestion into a pull request` workflow:
 

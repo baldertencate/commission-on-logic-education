@@ -27,11 +27,12 @@ type GeneratedSuggestion = {
 
 const headings = {
   title: "Resource title",
+  maintainerEmail: "Maintainer email address",
   url: "Canonical URL",
   description: "Description",
   types: "Resource types",
   topics: "Logic topics",
-  languages: "Languages",
+  languages: "Language codes",
   audiences: "Intended audiences",
   authors: "Authors or maintaining organizations",
   features: "Notable features",
@@ -41,7 +42,11 @@ const headings = {
   platforms: "Platforms or required software",
   registration: "Is registration required?",
   notes: "Additional notes",
+  checks: "Final checks",
 } as const;
+
+const maintainerAgreement =
+  "I agree to periodic maintenance contact";
 
 export function parseIssueForm(body: string): IssueFields {
   const fields: IssueFields = {};
@@ -129,6 +134,39 @@ function parseAccessModes(value: string): Array<"online" | "download" | "physica
   });
 }
 
+function parseLanguageTags(value: string): string[] {
+  const tags = choiceValues(value).map((tag) => {
+    try {
+      return new Intl.Locale(tag).toString();
+    } catch {
+      throw new Error(
+        `“${tag}” is not a valid language tag. Use a code such as en, es, or pt-BR.`,
+      );
+    }
+  });
+  return [...new Set(tags)];
+}
+
+function parseMaintainerEmail(value: string): string {
+  const email = value.trim();
+  if (normalizeChoice(email) === "unknown") {
+    throw new Error("New suggestions require a maintainer email address; “unknown” is for legacy records only.");
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    throw new Error("The maintainer email address is not valid.");
+  }
+  return email;
+}
+
+function requireMaintainerAgreement(value: string): void {
+  const agreed = value
+    .split(/\r?\n/)
+    .some((line) => /^\s*-\s+\[[xX]\]\s+/.test(line) && line.includes(maintainerAgreement));
+  if (!agreed) {
+    throw new Error("The maintainer contact and public-storage agreement must be accepted.");
+  }
+}
+
 function slugify(value: string, fallback: string): string {
   const slug = value
     .normalize("NFD")
@@ -163,8 +201,12 @@ export async function buildResourceSuggestion(
 ): Promise<GeneratedSuggestion> {
   const fields = parseIssueForm(input.body);
   const title = requiredField(fields, headings.title);
+  const maintainerEmail = parseMaintainerEmail(
+    requiredField(fields, headings.maintainerEmail),
+  );
   const rawUrl = requiredField(fields, headings.url);
   const description = requiredField(fields, headings.description);
+  requireMaintainerAgreement(requiredField(fields, headings.checks));
 
   let url: string;
   try {
@@ -175,11 +217,10 @@ export async function buildResourceSuggestion(
     throw new Error("The canonical URL must be a complete http:// or https:// address.");
   }
 
-  const [typesTaxonomy, topicsTaxonomy, languagesTaxonomy, audiencesTaxonomy, resourceFiles] =
+  const [typesTaxonomy, topicsTaxonomy, audiencesTaxonomy, resourceFiles] =
     await Promise.all([
       readTaxonomy("resource-types"),
       readTaxonomy("topics"),
-      readTaxonomy("languages"),
       readTaxonomy("audiences"),
       listResourceFiles(),
     ]);
@@ -207,11 +248,7 @@ export async function buildResourceSuggestion(
     "logic topics",
     topicsTaxonomy,
   );
-  const languages = mapTaxonomyChoices(
-    requiredField(fields, headings.languages),
-    "languages",
-    languagesTaxonomy,
-  );
+  const languages = parseLanguageTags(fields[headings.languages] ?? "");
   const audiences = mapTaxonomyChoices(
     requiredField(fields, headings.audiences),
     "audiences",
@@ -243,11 +280,12 @@ export async function buildResourceSuggestion(
     title,
     url,
     description,
+    maintainerEmail,
   };
   if (features.length) resource.features = features;
   resource.types = types;
   resource.topics = topics;
-  resource.languages = languages;
+  if (languages.length) resource.languages = languages;
   resource.audiences = audiences;
   if (authors.length) resource.authors = authors;
   resource.access = access;
