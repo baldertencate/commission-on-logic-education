@@ -14,7 +14,15 @@ body:
     id: title
     attributes:
       label: Resource title
-      placeholder: Logic in Action
+      placeholder: My logic tool
+    validations:
+      required: true
+  - type: input
+    id: maintainer_email
+    attributes:
+      label: Maintainer email address
+      description: This address will be associated with the record for maintenance contact and stored in the publicly accessible GitHub repository and generated catalogue data.
+      placeholder: maintainer@example.org
     validations:
       required: true
   - type: input
@@ -75,21 +83,12 @@ body:
         - Other
     validations:
       required: true
-  - type: dropdown
+  - type: textarea
     id: languages
     attributes:
-      label: Languages
-      description: Select all available languages, or “Multilingual or language-independent”.
-      multiple: true
-      options:
-        - English
-        - Spanish
-        - French
-        - German
-        - Dutch
-        - Multilingual or language-independent
-    validations:
-      required: true
+      label: Language codes
+      description: Enter one BCP 47 language code per line, such as en, es, or pt-BR. Leave blank if unknown; use mul for unspecified multilingual content or zxx for language-independent content.
+      placeholder: en
   - type: dropdown
     id: audiences
     attributes:
@@ -177,4 +176,6 @@ body:
         - label: I checked that this resource is not already in the catalogue.
           required: true
         - label: The information above is suitable for a public catalogue.
+          required: true
+        - label: I agree to periodic maintenance contact, including about stale URLs, and understand that the maintainer email will be stored with the record in the public GitHub repository and generated catalogue data.
           required: true

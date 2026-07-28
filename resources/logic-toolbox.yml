@@ -23,6 +23,7 @@ access:
 status: unknown
 notes: This material is provided with the hope that it may be useful to students- but WITHOUT ANY
   WARRANTY – even an implied warranty of its fitness for a particular purpose.
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

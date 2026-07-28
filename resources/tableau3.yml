@@ -26,6 +26,7 @@ access:
 status: unknown
 notes: The Tableau3 program has been written in Java and requires some configuration in order to get
   it working properly.
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

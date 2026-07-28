@@ -33,6 +33,7 @@ access:
 status: unknown
 notes: The new AProS Application will soon be available! Stay tuned for the first release version in
   Fall 2023!
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

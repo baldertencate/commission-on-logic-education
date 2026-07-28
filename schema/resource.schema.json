@@ -10,9 +10,9 @@
     "title",
     "url",
     "description",
+    "maintainerEmail",
     "types",
     "topics",
-    "languages",
     "audiences",
     "access",
     "status",
@@ -49,6 +49,18 @@
       "type": "string",
       "minLength": 1
     },
+    "maintainerEmail": {
+      "description": "Email address associated with the record for periodic maintenance contact. It is stored in the public repository and generated catalogue data but is not displayed by the catalogue website. Legacy records may use unknown.",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "email"
+        },
+        {
+          "const": "unknown"
+        }
+      ]
+    },
     "features": {
       "type": "array",
       "items": {
@@ -76,10 +88,11 @@
       "uniqueItems": true
     },
     "languages": {
+      "description": "BCP 47 language tags. Omit when the language is unknown; use mul for unspecified multilingual content and zxx for language-independent content.",
       "type": "array",
       "items": {
         "type": "string",
-        "pattern": "^[a-z]{2,3}$"
+        "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
       },
       "minItems": 1,
       "uniqueItems": true

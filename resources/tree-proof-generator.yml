@@ -24,6 +24,7 @@ access:
   requiresSoftware: false
 status: unknown
 notes: User guide is given in the webpage with syntax and instructions on how to use the tool.
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

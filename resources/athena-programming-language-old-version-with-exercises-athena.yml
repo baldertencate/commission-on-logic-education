@@ -32,6 +32,7 @@ status: unknown
 notes: New version has in-website playground but can also download. There are three available
   courses for learning Athena. The material for these courses consists of thoughtfully curated
   excerpts from the Athena book. There is User’s Guide for old version.
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

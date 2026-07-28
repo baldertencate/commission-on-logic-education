@@ -23,6 +23,7 @@ access:
   requiresSoftware: false
 status: unknown
 notes: Will try out the links to discover more educational logic resources.
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

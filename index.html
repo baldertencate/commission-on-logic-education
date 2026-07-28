@@ -107,8 +107,17 @@
             <li>List items start with <code>-</code>; quote text containing <code>:</code> or <code>#</code>.</li>
             <li>Keep <code>id</code> unchanged and ensure the filename still matches it.</li>
             <li>
-              Values under <code>types</code>, <code>topics</code>, <code>languages</code>, and
-              <code>audiences</code> must come from the catalogue taxonomies.
+              Values under <code>types</code>, <code>topics</code>, and <code>audiences</code> must
+              come from the catalogue taxonomies.
+            </li>
+            <li>
+              <code>languages</code> uses standard tags such as <code>en</code> or
+              <code>pt-BR</code>; omit it when unknown.
+            </li>
+            <li>
+              <code>maintainerEmail</code> is a valid maintenance contact address or
+              <code>unknown</code> for legacy records. Real addresses are stored in the public
+              repository and generated catalogue data.
             </li>
             <li>Use the resource’s stable, canonical website for <code>url</code>.</li>
           </ul>
@@ -157,8 +166,8 @@
       <ol class="contribution-steps">
         <li><strong>Sign in to GitHub</strong> with a free account.</li>
         <li>
-          <strong>Describe the resource</strong> and choose its topics, audiences, languages, and
-          access details from the catalogue’s allowed values.
+          <strong>Describe the resource</strong>, provide a maintainer email, choose its topics and
+          audiences, and enter any known language codes and access details.
         </li>
         <li>
           <strong>Submit the suggestion.</strong>

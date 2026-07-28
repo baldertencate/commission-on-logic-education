@@ -39,6 +39,7 @@ access:
   requiresSoftware: null
 status: unknown
 notes: "User Guides (in Spanish) under:: Library :: Applications :: Comentario Software"
+maintainerEmail: unknown
 provenance:
   - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
     sourceSection: Logic software and logic education

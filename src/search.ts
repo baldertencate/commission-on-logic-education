@@ -4,7 +4,7 @@ export type SearchableResource = {
   features?: string[];
   types: string[];
   topics: string[];
-  languages: string[];
+  languages?: string[];
   audiences: string[];
   authors?: string[];
   notes?: string;
@@ -36,7 +36,7 @@ export function matchesSearch(resource: SearchableResource, terms: string[]): bo
     ...(resource.features ?? []),
     ...resource.types,
     ...resource.topics,
-    ...resource.languages,
+    ...(resource.languages ?? []),
     ...resource.audiences,
     ...(resource.authors ?? []),
     resource.notes ?? "",
