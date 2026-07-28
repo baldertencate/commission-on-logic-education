@@ -1,0 +1,37 @@
+name: Notify resource maintainers
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "resources/*.yml"
+      - "resources/*.yaml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: maintainer-notifications
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generate and send maintainer notifications
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          CATALOGUE_EMAIL_USERNAME: ${{ secrets.CATALOGUE_EMAIL_USERNAME }}
+          CATALOGUE_EMAIL_APP_PASSWORD: ${{ secrets.CATALOGUE_EMAIL_APP_PASSWORD }}
+        run: npm run notify:maintainers

@@ -113,9 +113,9 @@ function networkFailure(url: string, error: unknown): UrlCheckResult {
   };
 }
 
-async function validatePublicTarget(
+export async function validatePublicTarget(
   rawUrl: string,
-  resolveHostname: (hostname: string) => Promise<string[]>,
+  resolveHostname: (hostname: string) => Promise<string[]> = defaultResolveHostname,
 ): Promise<UrlCheckResult | undefined> {
   let parsed: URL;
   try {
