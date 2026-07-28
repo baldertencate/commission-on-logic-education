@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://resources.illc.uva.nl/schemas/catalogue.schema.json",
+  "title": "Logic education resources catalogue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "resources"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "$ref": "resource.schema.json"
+      }
+    }
+  }
+}

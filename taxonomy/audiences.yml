@@ -1,0 +1,12 @@
+- id: school
+  label: Primary or secondary school
+- id: undergraduate
+  label: Undergraduate students
+- id: graduate
+  label: Graduate students
+- id: educators
+  label: Educators
+- id: researchers
+  label: Researchers
+- id: general-public
+  label: General public

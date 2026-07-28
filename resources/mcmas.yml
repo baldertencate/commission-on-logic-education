@@ -1,0 +1,34 @@
+id: mcmas
+title: MCMAS
+url: https://sail.doc.ic.ac.uk/software/mcmas/
+description: Open-source, OBDD-based symbolic model checker tailored to the verification of
+  Multi-Agent Systems (MAS)
+features:
+  - Includes software + graphical interface documentation
+types:
+  - other
+topics:
+  - epistemic-logic
+  - model-checking
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - VAS Group, Imperial College London
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Multi-agent Systems
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

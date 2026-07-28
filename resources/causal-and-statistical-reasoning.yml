@@ -1,0 +1,40 @@
+id: causal-and-statistical-reasoning
+title: Causal and Statistical Reasoning
+url: https://oli.cmu.edu/courses/causal-and-statistical-reasoning-open-free/
+description: "An introduction to causal and statistical reasoning, this course is meant for students
+  interested in critical thinking skills for daily life, students who will take a few statistics
+  courses in service of a related field of study, and/or students interested in the foundations of
+  quantitative causal models: called Bayes Networks."
+features:
+  - "Topics Covered: Causation, association and independence, causation to association, association
+    to causation: problems, association to causation: strategies"
+types:
+  - course
+topics:
+  - argumentation
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Carnegie Mellon University
+access:
+  cost: free
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: |-
+  Open & Free Version
+  This Open & Free Course provides you with access to an online course comparable to a full semester course on Causal and Statistical Reasoning taught at Carnegie Mellon University. Your access includes the complete online course including all expository text, simulations, case studies, comprehension tests, computer tutors, and the Causality Lab.
+  At Carnegie Mellon, this online course is taught in combination with instructor-led discussion sections. The Open & Free Causal and Statistical Reasoning course does NOT include access to the end-of-module graded exams or to the course instructor. No credit is awarded for completing the Open & Free Causal and Statistical Reasoning course.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Online Course
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

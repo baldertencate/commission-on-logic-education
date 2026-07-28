@@ -1,0 +1,34 @@
+id: logic-toolbox
+title: Logic-Toolbox
+url: https://philosophy.lander.edu/~jsaetti/Welcome.html
+description: Categorical Logic (Seems to not be working properly), Propositional Logic, Formal Proofs
+types:
+  - educational-software
+topics:
+  - proof-theory
+  - propositional-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "Update:4/9/13Please send questions, feedback, suggestions, and bug reports
+    to:john.saetti@gmail.comCopyright ©2007 by John Saetti – ALL RIGHTS RESERVEDLast update: 6-1-18"
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: This material is provided with the hope that it may be useful to students- but WITHOUT ANY
+  WARRANTY – even an implied warranty of its fitness for a particular purpose.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Educational Program
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

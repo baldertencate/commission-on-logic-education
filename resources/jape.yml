@@ -1,0 +1,39 @@
+id: jape
+title: Jape
+url: https://github.com/RBornat/jape
+description: "Jape is a configurable proof calculator and supports the interactive discovery of
+  formal proofs in inference systems. It is distributed with a number of example logic encodings: in
+  particular a natural deduction, several sequent calculi, a treatment of Burroughs-Abadi-Newman
+  protocols, a Hindley-Milner typing mechanism, and various others including even Aristotlean
+  syllogisms."
+features:
+  - A manual (Roll your own Jape logic) is available for those who would like to experiment with
+    their own encodings.
+  - Get releases via
+  - the release page, and please report problems via the issues page.
+types:
+  - solver
+topics:
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Richard Bornat
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Proof Calculator
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

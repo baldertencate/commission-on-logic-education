@@ -1,0 +1,33 @@
+id: alloy
+title: Alloy
+url: https://alloytools.org/
+description: Open source language and analyzer for software modeling
+features:
+  - Site has language doc, tool downloads, and a repository of links to case studies and
+    applications.
+types:
+  - educational-software
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Software Design Group at MIT.
+access:
+  cost: free
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Modelling
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

@@ -1,0 +1,221 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://resources.illc.uva.nl/schemas/resource.schema.json",
+  "title": "Logic education resource",
+  "description": "A resource for teaching, learning, or communicating logic.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "url",
+    "description",
+    "types",
+    "topics",
+    "languages",
+    "audiences",
+    "access",
+    "status",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "alternateUrls": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https?://"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2,3}$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "audiences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cost",
+        "mode",
+        "requiresSoftware"
+      ],
+      "properties": {
+        "cost": {
+          "enum": [
+            "free",
+            "freemium",
+            "paid",
+            "unknown"
+          ]
+        },
+        "mode": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "online",
+              "download",
+              "physical"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "requiresSoftware": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "registration": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "active",
+        "inactive",
+        "unknown"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sourceUrl",
+          "sourceSection",
+          "importedAt"
+        ],
+        "properties": {
+          "sourceUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "sourceSection": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceResourceType": {
+            "type": "string"
+          },
+          "sourceExternalSoftware": {
+            "type": "string"
+          },
+          "importedAt": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "needsReview",
+        "issues"
+      ],
+      "properties": {
+        "needsReview": {
+          "type": "boolean"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

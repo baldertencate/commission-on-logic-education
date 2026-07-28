@@ -1,0 +1,33 @@
+id: sequent-prover
+title: Sequent Prover
+url: https://cspsat.gitlab.io/seqprover/
+description: This small program seqprover.pl (written in Prolog) searches a cut-free proof of the
+  given sequent of first-order logic.
+types:
+  - solver
+topics:
+  - predicate-logic
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Naoyuki Tamura
+access:
+  cost: free
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+notes: Please refer to guide.pdf for notations and inference rules.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Prover
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

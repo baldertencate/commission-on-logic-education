@@ -1,0 +1,36 @@
+id: dn-fn
+title: DN-FN
+url: http://patrice.bailhache.free.fr/dnfn/deductioneng.html
+description: Program to learn Natural Deduction in Gentzen-Kleene’s style
+features:
+  - The disk contains two programs, DN and FN, intended to provide some help in teaching Natural
+    Deduction (in Gentzen’s style) and Normal Forms calculation. They are written in Pascal for PC
+    computers. The primitive idea was to have at disposal a true and intelligent deriver, being able
+    to calculate and provide (on a printer) fair copies for exercises carried out for a long time at
+    the University of Nantes.
+types:
+  - educational-software
+topics:
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Patrice Bailhache, Université de Nantes
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Educational Program
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

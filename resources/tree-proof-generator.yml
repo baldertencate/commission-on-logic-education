@@ -1,0 +1,35 @@
+id: tree-proof-generator
+title: Tree Proof Generator
+url: https://www.umsu.de/trees/
+description: Enter a formula of standard propositional, predicate, or modal logic. The page will try
+  to find either a countermodel or a tree proof (a.k.a. semantic tableau).
+types:
+  - solver
+topics:
+  - modal-logic
+  - predicate-logic
+  - proof-theory
+  - propositional-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Wolfgang Schwarz
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: User guide is given in the webpage with syntax and instructions on how to use the tool.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Prover
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

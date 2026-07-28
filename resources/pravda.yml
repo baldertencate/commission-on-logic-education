@@ -1,0 +1,33 @@
+id: pravda
+title: Pravda
+url: http://pravda.irisa.fr/index.html
+description: Pedagogical prover – exercices in proof systems
+features:
+  - Resolution + Hilbert + Natural Deduction proof systems
+types:
+  - solver
+topics:
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - ENS Rennes
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: Not secured connection.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Proof System
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

@@ -1,0 +1,39 @@
+id: logic-in-action
+title: Logic in Action
+url: https://www.logicinaction.org/
+description: |-
+  Open course in logic.
+  Developed to provide a modern introduction to the field of logic with topics reflecting both its mathematical essentials and a broad view of its interdisciplinary role.
+features:
+  - Online and PDF version of the textbook
+  - Slides for teaching available, in English and in Spanish (made by Fernando Velazquez Quesada).
+  - Further exercise material for the chapters (courtesy of Dora Achourioti, AUC).
+  - Online exercises in modal logic.
+types:
+  - book
+  - website
+topics:
+  - modal-logic
+languages:
+  - en
+  - es
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Johan van Benthem, Hans van Ditmarsch, Jan van Eijck, Jan Jaspars
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Book in Website
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

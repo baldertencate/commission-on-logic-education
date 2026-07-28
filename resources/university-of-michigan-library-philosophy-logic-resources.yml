@@ -1,0 +1,33 @@
+id: university-of-michigan-library-philosophy-logic-resources
+title: University of Michigan Library – Philosophy – Logic Resources
+url: https://guides.lib.umich.edu/c.php?g=282764&p=4180576
+description: Selected resources useful for philosophical research.
+features:
+  - Online Logic Resources, Logic Blogs, Online Courses for Logic
+types:
+  - reference
+  - website
+topics:
+  - history-philosophy
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - University of Michigan
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: University of Michigan Library – Philosophy – Logic Resources
+    sourceResourceType: Collection of ResourcesWebsite
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

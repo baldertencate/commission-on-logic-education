@@ -1,0 +1,43 @@
+id: mechanized-reasoning
+title: Mechanized Reasoning
+url: http://www-formal.stanford.edu/clt/ARS/ars-db.html
+description: Variety of links related to Automated Reasoning
+features:
+  - "This page contains the following items:"
+  - What is Automated Reasoning,
+  - Existing systems, related fields/pages, archives, …
+  - Research groups and projects,
+  - Discussion forums,
+  - Journals,
+  - Organizations,
+  - An annotated reading list
+types:
+  - website
+topics:
+  - automated-reasoning
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Michael Kohlhase and Carolyn Talcott.
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: "[Last updated 2 September 1996.] This page is still under construction, so it is by no means
+  complete. For better service to the Mechanized Reasoning community we will need your help. Please
+  contribute!. Send links, material to fill in blanks, suggestions, encouragement, or donations by
+  clicking here."
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Website
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

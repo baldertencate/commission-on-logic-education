@@ -1,0 +1,51 @@
+id: summa-logicae-spanish-and-english
+title: Summa Logicae (Spanish & English)
+url: http://logicae.usal.es/mambo/index.php?option=com_summalogicaexxi&menu_task=Principal
+description: Digital library, a reference book for logic students and researchers alike, specially
+  Spanish speakers, overtly involved in innovation and paedagogical systematization. We also include
+  software, a selection of links and a glossary. There is a page in the site under the heading
+  working groups, specifically devised for students.
+features:
+  - "Fundamentals. This heading unifies a series of basic content and the fundamentals of our
+    discipline, alternatively it could have been called “Mathematical Logic”, o simply, “Logic”.
+    Under this category we find the following sub-branches: Elementary Logic, Proof Theory, Model
+    Theory, Computational Theory and Set Theory. Logical Systems. The greater part of our research
+    activity involves devising logical systems of diverse nature. Traditionally they have been
+    called non-classical logics, many of them were extensions of classical logic. We have decided to
+    call them simply “logical systems”. Those materials, headings and subheadings displayed in this
+    branch are so numerous that our only alternative was to resort to an open list which shall grow
+    with time. Applications. Under this heading we have included all possible applications of logic,
+    or logical systems, in different fields, such as: Computer Science, Linguistics, Economics or
+    Science. Studies on Logic. Under this heading you will find a great variety of external studies
+    which have logic as their main subject: History of Logic, Bibliography, Philosophy of Logic and
+    Paedagogy of Logic."
+types:
+  - website
+topics:
+  - history-philosophy
+  - proof-theory
+languages:
+  - en
+  - es
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - María Manzano, et al.
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: null
+status: unknown
+notes: "User Guides (in Spanish) under:: Library :: Applications :: Comentario Software"
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Website
+    sourceExternalSoftware: NoYes
+    importedAt: 2026-07-28
+review:
+  needsReview: true
+  issues:
+    - 'Clarify the source value for external software: "NoYes".'

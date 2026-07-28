@@ -1,0 +1,34 @@
+id: power-of-logic
+title: Power of Logic
+url: https://www.poweroflogic.com/
+description: The Power of Logic Web Tutor is a free tutorial to accompany the sixth edition of The
+  Power of Logic by Frances Howard-Snyder, Daniel Howard-Snyder, and Ryan Wasserman.
+features:
+  - This internet-based study guide provides you with numerous ways to check your understanding of
+    logic and to independently check your work and receive feedback.
+types:
+  - website
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Website produced by Logic Pedallersfor McGraw-Hill © 2012 – 2023
+access:
+  cost: free
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Website
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

@@ -1,0 +1,40 @@
+id: logic-ly
+title: Logic.ly
+url: https://logic.ly/demo/samples
+description: "[Buy or Free Online Demo] The digital logic simulator. Logic.ly simulates logic
+  circuits and assists students in learning digital electronics. Keep students engaged with a simple
+  and friendly UI that encourages experimentation and discovery."
+features:
+  - Design circuits quickly and easily with a modern and intuitive user interface with
+    drag-and-drop, copy/paste, zoom & more.
+  - Can pause the simulation and watch the signal propagate as you advance step-by-step.
+types:
+  - educational-software
+topics:
+  - digital-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Copyright 2008-2023 Bowler Hat LLC. All rights reserved.
+access:
+  cost: paid
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+notes: |-
+  News & Updates:
+  • Logic.ly Blog,
+  • Follow Logic.ly on Twitter
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Educational Program
+    sourceExternalSoftware: Yes (Windows and macOS)
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

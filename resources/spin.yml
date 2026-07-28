@@ -1,0 +1,34 @@
+id: spin
+title: Spin
+url: https://spinroot.com/spin/whatispin.html
+description: Widely used open-source software verification too
+features:
+  - "Includes: examples, stories, tutorials, books, papers model extraction, exercises, docs on use,
+    community"
+types:
+  - solver
+topics:
+  - model-checking
+  - temporal-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Bell Labs in the Unix group of the Computing Sciences Research Center
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Model Checkers for Temporal Logics
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

@@ -1,0 +1,37 @@
+id: student-cognition-toolbox-for-statistics
+title: Student Cognition Toolbox for Statistics
+url: https://oli.cmu.edu/courses/statistics-study-skills-the-student-cognition-toolbox-open-free/
+description: The Student Cognition Toolbox (SCT) is a short course companion (or “sidecar”)
+  introducing and providing direct practice in study strategies that are informed by learning
+  science research. In this version of the SCT, material from introductory statistics is used to
+  illustrate the application of the study strategies. This version gives examples and
+  recommendations specifically for students studying Introductory Statistics.
+types:
+  - course
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Carnegie Mellon University
+access:
+  cost: free
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: |-
+  Open & Free Version
+  Same as above
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Online Course
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

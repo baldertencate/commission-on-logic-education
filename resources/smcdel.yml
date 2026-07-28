@@ -1,0 +1,34 @@
+id: smcdel
+title: SMCDEL
+url: https://w4eg.de/malvin/illc/smcdelweb/index.html
+description: A symbolic model checker for Dynamic Epistemic Logic.
+features:
+  - Example codes, Paper, and Technical report
+types:
+  - website
+topics:
+  - epistemic-logic
+  - modal-logic
+  - model-checking
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Malvin Gattinger, ILLC, Universiteit van Amsterdam
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Modal Logic
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

@@ -1,0 +1,30 @@
+id: panda
+title: Panda
+url: https://people.irisa.fr/Francois.Schwarzentruber/panda/
+description: A logic education resource titled Panda.
+types:
+  - solver
+topics:
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+notes: Software that needs to be downloaded.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Proof System
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: true
+  issues:
+    - The source did not provide a description.

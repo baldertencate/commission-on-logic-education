@@ -1,0 +1,36 @@
+id: touist
+title: TouIST
+url: https://touist.github.io/
+description: A graphical user interface and command line for using a SAT/SMT solver
+features:
+  - A friendly language for propositional logic and more
+types:
+  - solver
+topics:
+  - automated-reasoning
+  - propositional-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Frédéric Maris (Associate Professor), Olivier Gasquet (Full Professor), Dominique Longin
+    (Research Scientist) and Maël Valais (PhD student) at Institut de Recherche en Informatique de
+    Toulouse (IRIT). It is a “second” or “new” version of a previous program, SAToulouse. TouIST is
+    now actively developed in context of Maël Valais’ PhD thesis.
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Solver
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

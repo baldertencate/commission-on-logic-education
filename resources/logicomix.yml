@@ -1,0 +1,37 @@
+id: logicomix
+title: Logicomix
+url: https://www.logicomix.com/en/index8be8.html?option=com_content&view=frontpage&Itemid=53
+description: Covering a span of sixty years, the graphic novel Logicomix was inspired by the epic
+  story of the quest for the Foundations of Mathematics.
+features:
+  - This was a heroic intellectual adventure most of whose protagonists paid the price of knowledge
+    with extreme personal suffering and even insanity. The book tells its tale in an engaging way,
+    at the same time complex and accessible. It grounds the philosophical struggles on the
+    undercurrent of personal emotional turmoil, as well as the momentous historical events and
+    ideological battles which gave rise to them.
+types:
+  - book
+topics:
+  - history-philosophy
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - The Team
+access:
+  cost: paid
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Comic
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

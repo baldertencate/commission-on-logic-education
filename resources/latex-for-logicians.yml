@@ -1,0 +1,34 @@
+id: latex-for-logicians
+title: Latex-for-logicians
+url: https://www.logicmatters.net/latex-for-logicians/
+description: These pages give a brief guide to resources of interest to logicians, philosophers and
+  others using LaTeX to produce papers or presentations, teaching materials, theses or books, and
+  perhaps wanting to include logical matter such as natural deduction proofs.
+types:
+  - article
+  - website
+topics:
+  - history-philosophy
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "Peter Smith. Contact: peter_smith AT me DOT com"
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: University of Michigan Library – Philosophy – Logic Resources
+    sourceResourceType: ArticleWebsite
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

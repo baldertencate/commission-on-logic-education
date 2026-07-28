@@ -1,0 +1,33 @@
+id: logic-in-the-19th-century-especially-that-of-george-boole
+title: Logic in the 19th century, especially that of George Boole
+url: https://www.math.uwaterloo.ca/~snburris/
+description: Link with book notes, slides, talks, lecture presentations centered on logic and logic
+  in the 19th century, especially that of George Boole
+types:
+  - book
+  - website
+topics:
+  - history-philosophy
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "Stanley N. Burris, Distinguished Professor Emeritus and Adjunct Professor, Department of Pure
+    Mathematics, University of Waterloo, E-mail: snburris@math.uwaterloo.ca"
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: BookWebsite
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

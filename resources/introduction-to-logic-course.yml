@@ -1,0 +1,31 @@
+id: introduction-to-logic-course
+title: Introduction to Logic course
+url: https://www.coursera.org/learn/logic-introduction
+description: A logic education resource titled Introduction to Logic course.
+types:
+  - course
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Coursera
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Online Course
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: true
+  issues:
+    - The source did not provide a description.

@@ -1,0 +1,31 @@
+id: book-of-proof-by-richard-hammack
+title: Book Of Proof by Richard Hammack
+url: https://www.people.vcu.edu/~rhammack/BookOfProof/
+description: A logic education resource titled Book Of Proof by Richard Hammack.
+types:
+  - book
+topics:
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Richard Hammack
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Book
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: true
+  issues:
+    - The source did not provide a description.

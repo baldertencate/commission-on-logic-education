@@ -1,0 +1,22 @@
+- id: article
+  label: Article
+- id: book
+  label: Book
+- id: course
+  label: Course
+- id: educational-software
+  label: Educational software
+- id: game
+  label: Game or puzzle
+- id: reference
+  label: Reference or collection
+- id: slides
+  label: Slides
+- id: solver
+  label: Solver or prover
+- id: video
+  label: Video
+- id: website
+  label: Website
+- id: other
+  label: Other
