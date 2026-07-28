@@ -1,0 +1,3 @@
+id: ci-invalid-resource-test
+title: Deliberately invalid CI test
+url: not-a-valid-url
