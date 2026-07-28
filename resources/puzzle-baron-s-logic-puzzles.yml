@@ -1,0 +1,34 @@
+id: puzzle-baron-s-logic-puzzles
+title: Puzzle Baron’s logic puzzles
+url: https://logic.puzzlebaron.com/
+description: Website with more than 25,000 unique puzzles available for play, both online and the
+  old fashioned way – with pencil and paper
+features:
+  - Feel free to solve online just for fun, or, for an added challenge, register a free account and
+    compete against thousands of other solvers to make it into our Logic Puzzle Hall of Fame!
+types:
+  - game
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Puzzle Baron
+access:
+  cost: free
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: University of Michigan Library – Philosophy – Logic Resources
+    sourceResourceType: Puzzles
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

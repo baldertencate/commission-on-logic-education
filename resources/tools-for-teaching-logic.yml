@@ -1,0 +1,33 @@
+id: tools-for-teaching-logic
+title: tools-for-teaching-logic
+url: https://francoisschwarzentruber.github.io/tools-for-teaching-logic/
+description: Open Source
+features:
+  - List of resources which appear in the remainder of this table
+types:
+  - website
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Francois Schwarzentruber, ENS Rennes, France
+access:
+  cost: free
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: One broken link. Can contribute to the page via GitHub (Improve this page)
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Website
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

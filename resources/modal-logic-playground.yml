@@ -1,0 +1,33 @@
+id: modal-logic-playground
+title: Modal Logic Playground
+url: https://rkirsling.github.io/modallogic/
+description: This app is a graphical semantic calculator for a specific kind of modal logic, modal
+  propositional logic, which extends propositional logic but lacks quantifiers (∀ and ∃)
+types:
+  - website
+topics:
+  - modal-logic
+  - predicate-logic
+  - propositional-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Ross Kirsling, Tokio
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Modal Logic
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

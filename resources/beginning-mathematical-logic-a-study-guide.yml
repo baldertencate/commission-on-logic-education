@@ -1,0 +1,41 @@
+id: beginning-mathematical-logic-a-study-guide
+title: "Beginning Mathematical Logic: A Study Guide"
+url: https://logicmatters.net/tyl/
+description: This book-length study guide recommends suitable texts for studying the main topics
+  of mathematical logic, either independently or alongside a university course.
+features:
+  - Includes an appendix and extensive book notes reviewing further books on logic and the
+    philosophy of mathematics.
+types:
+  - book
+topics:
+  - general-logic
+  - metalogic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "Peter Smith. Contact: peter_smith AT me DOT com"
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: Previously published under the title Teach Yourself Logic.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Book
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: University of Michigan Library – Philosophy – Logic Resources
+    sourceResourceType: BookStudy Guide
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

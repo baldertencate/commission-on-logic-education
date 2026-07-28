@@ -1,0 +1,41 @@
+id: logicmatters-net
+title: Logicmatters.net
+url: https://www.logicmatters.net/
+description: A logic education resource titled Logicmatters.net.
+features:
+  - THE BIG RED LOGIC BOOKS
+  - LOGIC MATTERS BLOG (Peter Smith)
+  - INTRO TO FORMAL LOGIC.
+  - GÖDEL’S THEOREMS (2 books)
+  - CATEGORY THEORY (introductory/intermediate level resources, with lecture notes and books)
+  - TEACH YOURSELF LOGIC study guide
+  - ARCHIVE Links to various old blog posts, papers, book reviews, notes, advice, etc.
+  - Link to LaTeX FOR LOGICIANS
+types:
+  - book
+  - website
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "Peter Smith. Contact: peter_smith AT me DOT com"
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: BookWebsite
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: true
+  issues:
+    - The source did not provide a description.

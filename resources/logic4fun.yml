@@ -1,0 +1,37 @@
+id: logic4fun
+title: Logic4Fun
+url: https://logic4fun.cecs.anu.edu.au/about
+description: Version 2.0 (beta), released in 2014.
+features:
+  - Full first order logic form for constraints in place of clause form
+  - Facility to save and reload work, and to submit it to the class manager
+  - Provision of standard logical symbols for connectives and quantifiers
+  - A help facility based on keyword search
+  - Puzzle text, solver input and solver output all on the same page
+types:
+  - solver
+topics:
+  - predicate-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - an ANU Summer Scholars team with Dr. John Slaney, Australia
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: Registration and login needed!
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Solver
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

@@ -1,0 +1,43 @@
+id: why3
+title: Why3
+url: https://www.why3.org/
+description: Platform for deductive program verification
+features:
+  - Includes Documentation + Examples + PRojects using Why3 + Other External Provers
+types:
+  - educational-software
+topics:
+  - model-checking
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - |-
+    Team-project Toccata (formerly ProVal) at Inria Saclay-Île-de-France / LRI Univ Paris-Saclay / CNRS. Main developers
+    •
+    François Bobot
+    •
+    Jean-Christophe Filliâtre
+    •
+    Claude Marché
+    •
+    Guillaume Melquiond
+    •
+    Andrei Paskevich
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Program Verification
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

@@ -1,0 +1,32 @@
+id: logic-in-argumentative-writing
+title: Logic in argumentative writing
+url: https://owl.purdue.edu/owl/general_writing/academic_writing/logic_in_argumentative_writing/index.html
+description: This handout is designed to help writers develop and use logical arguments in writing.
+  This handout helps writers analyze the arguments of others and generate their own arguments.
+types:
+  - article
+  - website
+topics:
+  - argumentation
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Purdue University
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: University of Michigan Library – Philosophy – Logic Resources
+    sourceResourceType: ArticleWebsite
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

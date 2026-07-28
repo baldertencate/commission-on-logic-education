@@ -1,0 +1,34 @@
+id: blogic
+title: Blogic
+url: https://weblogic.a2hosted.com/Logic/
+description: This book explores the deep structure of thought and language. It will not teach you
+  how to think or how to speak, but it will teach you how to think and speak about thinking and
+  speaking — how to analyze and discuss them in terms of universal principles by which they are
+  governed. These principles play an especially important role in reasoning — the reasoning that we
+  do in our heads, when we think, and the reasoning that we do aloud when we argue for a conclusion.
+types:
+  - book
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - David Velleman
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: University of Michigan Library – Philosophy – Logic Resources
+    sourceResourceType: Book
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

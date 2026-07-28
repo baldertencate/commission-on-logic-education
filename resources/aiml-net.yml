@@ -1,0 +1,36 @@
+id: aiml-net
+title: AiML.Net
+url: http://www.cs.man.ac.uk/~schmidt/tools/
+description: List of tools of modal logic
+features:
+  - Incomplete list of Accessible theorem provers, Verifiers, Translators, Automated correspondence
+    theory, Visualisation, Other tools, Generators of formulae, Collections of problems, Related
+    links
+types:
+  - website
+topics:
+  - automated-reasoning
+  - modal-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Renata Schmidt, University of Manchester
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: Not secured connection
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Modal Logic
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

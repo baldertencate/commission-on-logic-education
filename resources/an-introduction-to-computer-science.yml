@@ -1,0 +1,31 @@
+id: an-introduction-to-computer-science
+title: An Introduction to Computer Science
+url: https://www.cs.drexel.edu/~src322/cs164/index.html
+description: I call this site many things, a textbook, a study guide, the course website. Its goal
+  is to present the material is a comprehensive written way.
+types:
+  - course
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Charlie Stuart, Drexel University’s College of Computing and Informatics
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Online Course
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

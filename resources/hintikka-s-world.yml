@@ -1,0 +1,38 @@
+id: hintikka-s-world
+title: Hintikka’s world
+url: http://hintikkasworld.irisa.fr/
+description: This website shows intelligent artificial agents reasoning about higher-order knowledge
+  (a knows that b knows that…). It enables to explore mental states of the agents by clicking on
+  them. It contains many classical AI examples.
+features:
+  - "This tool can be used for: Learning modal logic. Model checking and satisfiability problem.
+    Learning models of dynamic epistemic logic. Having fun with epistemic puzzles."
+types:
+  - website
+topics:
+  - epistemic-logic
+  - modal-logic
+  - model-checking
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - IRISA, France
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: Not secured connection
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Modal Logic
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

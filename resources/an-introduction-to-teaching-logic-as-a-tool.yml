@@ -1,0 +1,30 @@
+id: an-introduction-to-teaching-logic-as-a-tool
+title: An Introduction to Teaching Logic as a Tool
+url: http://www.cs.cornell.edu/info/people/gries/Logic/Introduction.html
+description: Contains links to different resources both educational and for teaching.
+types:
+  - website
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - David Gries and Fred B. Schneider
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Website
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

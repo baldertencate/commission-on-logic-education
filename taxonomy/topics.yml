@@ -1,0 +1,28 @@
+- id: general-logic
+  label: General logic
+- id: propositional-logic
+  label: Propositional logic
+- id: predicate-logic
+  label: Predicate and first-order logic
+- id: modal-logic
+  label: Modal logic
+- id: epistemic-logic
+  label: Epistemic and dynamic epistemic logic
+- id: temporal-logic
+  label: Temporal logic
+- id: proof-theory
+  label: Proof theory and natural deduction
+- id: automated-reasoning
+  label: Automated reasoning
+- id: model-checking
+  label: Model checking and verification
+- id: argumentation
+  label: Argumentation and critical thinking
+- id: history-philosophy
+  label: History and philosophy of logic
+- id: digital-logic
+  label: Digital and circuit logic
+- id: metalogic
+  label: Metalogic
+- id: other
+  label: Other

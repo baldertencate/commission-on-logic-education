@@ -1,0 +1,34 @@
+id: pandora
+title: Pandora
+url: https://www.doc.ic.ac.uk/pandora/newpandora/index.html
+description: Pandora stands for “Proof Assistant for Natural Deduction using Organised Rectangular
+  Areas”. Pandora can be used to prove that a <goal> formula follows from the given formulae.
+features:
+  - Quick start + documentation + software
+types:
+  - solver
+topics:
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Imperial College London
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+notes: Software that needs to be downloaded. To run Pandora, Java Web Start is required
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Proof System
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

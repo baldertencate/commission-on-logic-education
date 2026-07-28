@@ -1,0 +1,31 @@
+id: simcirjs
+title: SimcirJS
+url: https://kazuhikoarase.github.io/simcirjs/
+description: SimcirJS(a.k.a. Simcir) is a circuit simulator in HTML5 and JavaScript.
+types:
+  - educational-software
+topics:
+  - digital-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Kazuhiko Arase
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: null
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Circuit Simulator
+    sourceExternalSoftware: NoYes
+    importedAt: 2026-07-28
+review:
+  needsReview: true
+  issues:
+    - 'Clarify the source value for external software: "NoYes".'

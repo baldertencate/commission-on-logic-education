@@ -1,0 +1,37 @@
+id: tableau3
+title: Tableau3
+url: http://logic.philosophy.ox.ac.uk/main.htm
+description: "Tableau3 has been written in Java and in order to run properly has two main
+  requirements: a program that can interpret the Java program (called a Java Runtime Environment)
+  and the ability to display mathematical symbols through the provision of appropriate fonts."
+features:
+  - The instructions on this Help Page are designed to provide assistance in getting Tableau3 to
+    work in a selection of environments.
+types:
+  - website
+topics:
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Tableau3 has been developed by Nik Roberts
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+notes: The Tableau3 program has been written in Java and requires some configuration in order to get
+  it working properly.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Website
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

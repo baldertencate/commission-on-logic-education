@@ -1,0 +1,45 @@
+id: apros
+title: AproS
+url: https://www.phil.cmu.edu/projects/apros/
+description: A logic education resource titled AproS.
+features:
+  - The broadened project has now three separate parts. (1) At its center is the automated proof
+    search engine AProS. It provides the computational core for all our efforts to enhance logic
+    learning and teaching through excellent technological support. (2) These efforts have resulted
+    in the development of sophisticated, interactive Labs that are incorporated in web-based Courses
+    featuring the LogicLab Software Suite, in particular, in the introductory course Logic & Proofs.
+    (3) The novel logical calculus NIC (normal intercalation calculus) reflects informal
+    bi-directional reasoning and allows the formulation of efficient strategies for proof search.
+    These strategies are implemented in AProS which, in turn, is the logical backbone for the
+    Dynamic Proof Tutor.
+types:
+  - course
+  - website
+topics:
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "Project Director: Wilfried Sieg, Research Staff: Dawn McLaughlin, Michael Ringenberg, Research
+    Collaborators: Joseph Ramsey, Research Associates (current): Patrick Walsh, Paulo Santos"
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+notes: The new AProS Application will soon be available! Stay tuned for the first release version in
+  Fall 2023!
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Online CourseProof Search
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: true
+  issues:
+    - The source did not provide a description.

@@ -1,0 +1,48 @@
+id: logic-and-proofs
+title: Logic & Proofs
+url: https://oli.cmu.edu/courses/logic-proofs/
+description: An introductory logic course, designed for students from a broad range of disciplines,
+  from mathematics and computer science to drama and creative writing. It is also designed to
+  reflect aspects of the logical tradition (going back to Aristotle) as well as the practical
+  applicability (for example for the construction of Boolean circuits). Below one finds a detailed
+  description of the course with many of its special features.
+features:
+  - "Logic & Proofs is a rigorous introduction to modern symbolic logic that covers both sentential
+    and predicate logic (including identity). The crucial skills of recognizing the (in-)correctness
+    of arguments are honed by working in the LogicLab: in derivation or proof problems, students
+    learn to construct complex arguments in a strategically guided way; in truth table and
+    truth-tree problems, the emphasis is on systematically finding counterexamples."
+types:
+  - course
+topics:
+  - argumentation
+  - digital-logic
+  - history-philosophy
+  - predicate-logic
+  - proof-theory
+  - propositional-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Carnegie Mellon University
+access:
+  cost: free
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: |-
+  Open & Free Version
+  Same as above
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Online Course
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

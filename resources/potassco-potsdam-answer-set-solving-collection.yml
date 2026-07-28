@@ -1,0 +1,33 @@
+id: potassco-potsdam-answer-set-solving-collection
+title: Potassco(Potsdam Answer Set Solving Collection)
+url: https://potassco.org/
+description: Tools for Answer Set Programming
+features:
+  - Getting started, Documentation, Software. Also contains an “Answer Set Programming” course at
+    https://teaching.potassco.org/
+types:
+  - solver
+topics:
+  - automated-reasoning
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - University of Potsdam
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Solver
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

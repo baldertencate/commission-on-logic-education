@@ -1,0 +1,39 @@
+id: introduction-to-logic
+title: Introduction to Logic
+url: http://logic.philosophy.ox.ac.uk/
+description: This website provides, through a range of materials and tools, an introduction to the
+  study of elementary logic covering propositional and predicate calculus. It is hoped that the site
+  may be useful more widely, for anyone who would like to investigate the subject. The material here
+  is intended to be used in conjunction with Wilfrid Hodges’ Logic. This text was used for the
+  Introduction to Logic course until 2008, when Hodges’ text was replaced with the Logic Manual as
+  set text.
+types:
+  - website
+topics:
+  - predicate-logic
+  - propositional-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - The Logic Web project has been directed by Hugh Rice at the Faculty of Philosophy.This site has
+    been developed by the Academic Computing Development TeamInitial development and design carried
+    out by Martin Rhys Jones..Acknowledgements
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: These webpages are no longer maintained and appear here as an unsupported resource only.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Website
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

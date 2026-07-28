@@ -1,0 +1,38 @@
+id: openproof-courseware-tools-for-learning-logic
+title: "Openproof Courseware: Tools for Learning Logic"
+url: https://www.gradegrinder.net/index.html
+description: The Openproof project at Stanford’s Center for the Study of Language and Information
+  (CSLI) is concerned with the application of software to problems in logic. Since the early 1980’s
+  we have been developing applications in logic education which are both innovative and effective.
+  The development of these courseware packages has in turn informed and influenced our research
+  agenda.
+features:
+  - "[REQUIRED TO BUY COURSES] Courses: Logical Reasoning with Diagrams and Sentences. Language,
+    Proof and Logic. and"
+types:
+  - book
+  - course
+topics:
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - CSLI, Standford University
+access:
+  cost: paid
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: BookOnline Course
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

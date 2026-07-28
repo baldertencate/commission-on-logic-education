@@ -1,0 +1,36 @@
+id: nusmv
+title: NuSMV
+url: https://nusmv.fbk.eu/
+description: Symbolic model checker
+features:
+  - "Includes: Projects using NuSMV + Mailing lists + On-line documentation + NuSMV Papers + NuSMV
+    Examples + Bugs and extensions + Other projects"
+types:
+  - solver
+topics:
+  - model-checking
+  - temporal-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "Joint project between: The Embedded Systems Unit in the Digital Industry Center at FBK-IRST;
+    The Model Checking group at Carnegie Mellon University , the Mechanized Reasoning Group at
+    University of Genova; and The Mechanized Reasoning Group at University of Trento."
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Model Checkers for Temporal Logics
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

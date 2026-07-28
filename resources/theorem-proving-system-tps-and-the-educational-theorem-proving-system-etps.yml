@@ -1,0 +1,43 @@
+id: theorem-proving-system-tps-and-the-educational-theorem-proving-system-etps
+title: Theorem Proving System (TPS) and the Educational Theorem Proving System (ETPS)
+url: https://gtps.math.cmu.edu/tps-about.html
+description: The Theorem Proving System (TPS) is an automated theorem-prover for first-order logic
+  and type theory. The Educational Theorem Proving System (ETPS) is a cut-down version of TPS
+  intended for use by students; it contains only commands relevant to proving theorems interactively
+features:
+  - Potential applications of automated theorem proving include hardware and software verification,
+    partial automation of various mathematical activities, promoting development of formal theories
+    in a wide variety of disciplines, deductive information systems for these disciplines, expert
+    systems which can reason, and certain aspects of artificial intelligence.
+types:
+  - solver
+topics:
+  - automated-reasoning
+  - model-checking
+  - predicate-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "[Peter Andrews] [Matthew Bishop] [Chad E. Brown] [Rémy Chrétien] [Eve Cohen] [Sunil Issar] [Dan
+    Nesmith] [Frank Pfenning] [Hongwei Xi]"
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+notes: TPS and ETPS run in Common Lisp, and can be used on any system where Common Lisp runs. TPS
+  and ETPS have been used extensively under Unix and Linux systems, and to some extent under
+  Windows.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Prover
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

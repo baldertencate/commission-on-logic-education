@@ -1,0 +1,37 @@
+id: the-incredible-proof-machine
+title: The Incredible Proof Machine
+url: https://incredible.pm/
+description: Tool to perform proofs in various logics (e.g. propositional, predicate logic) visually
+features:
+  - You simply add blocks that represent the various proofs steps, connect them properly, and if the
+    conclusion turns green, then you have created a complete proof! Simply drag and drop to connect
+    two dots; for some examples of completed proofs, see this paper.
+types:
+  - solver
+topics:
+  - predicate-logic
+  - proof-theory
+  - propositional-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Mostly Joachim Breitner, Karlsruher Institut für Technologie, with valuable help from some
+    colleagues and friends.
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Proof System
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

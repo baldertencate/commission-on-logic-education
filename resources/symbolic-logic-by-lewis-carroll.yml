@@ -1,0 +1,31 @@
+id: symbolic-logic-by-lewis-carroll
+title: Symbolic Logic by Lewis Carroll
+url: https://www.gutenberg.org/ebooks/28696
+description: A logic education resource titled Symbolic Logic by Lewis Carroll.
+types:
+  - book
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Lewis Carroll
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Book
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: true
+  issues:
+    - The source did not provide a description.

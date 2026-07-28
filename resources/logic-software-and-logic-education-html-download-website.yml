@@ -1,0 +1,37 @@
+id: logic-software-and-logic-education-html-download-website
+title: Logic software and logic education HTML download website
+url: http://www.cs.otago.ac.nz/staffpriv/hans/logiccourseware.html
+description: |-
+  Commenced in 1996. Last updated 23 May 2007.
+  It currently has some broken links. Those which are not broken are listed below.
+features:
+  - "These pages contain a pretty comprehensive, alphabetically ordered: list of educational logic
+    software as well as additional, very incomplete, information on that subject in the form of
+    links to: the theorem proving community, other lists of educational logic software, logic
+    education projects ."
+types:
+  - website
+topics:
+  - automated-reasoning
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "Maintained by Hans van Ditmarsch . Comments appreciated: hans@cs.otago.ac.nz"
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: HTML Website
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

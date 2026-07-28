@@ -1,0 +1,39 @@
+id: https-iltis-rub-de
+title: https://iltis.rub.de
+url: https://iltis.rub.de
+description: |-
+  Actively developed educational support system providing many types of exercises on propositional, modal and first-order logic. choosing vocabularies, modelling, transforming, resolution, constructing
+  models)
+features:
+  - Extensive course material variety of educational tasks
+  - Tasks can be combined into exercise sequences
+  - Extensive and customizable feedback
+types:
+  - website
+topics:
+  - predicate-logic
+  - propositional-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - |-
+    Project coordinators: Marko Schmellenkamp, Fabian Vehlken,
+    Thomas Zeume (Ruhr University Bochum)
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Webbased educational support system
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

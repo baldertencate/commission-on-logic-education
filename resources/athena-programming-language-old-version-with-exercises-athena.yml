@@ -1,0 +1,44 @@
+id: athena-programming-language-old-version-with-exercises-athena
+title: "Athena Programming Language (Old version with exercises: Athena)"
+url: https://athena-lang.org/
+description: "Athena is a programming language and an interactive theorem proving environment rolled
+  in one. (1) As a programming language, Athena is a higher-order functional language in the
+  tradition of Scheme and ML: strict and lexically scoped. (2) As a theorem proving system, Athena
+  is based on many-sorted first-order logic."
+features:
+  - Combining expressivity and simplicity. True natural-deduction style. Conditional and Equational
+    Rewriting. Built-in Proof Automation. Proof Reuse and Custom Tactics. Flexible Module System.
+    Extensible notation. Abstract-level proofs and structured theories
+types:
+  - educational-software
+  - solver
+topics:
+  - automated-reasoning
+  - predicate-logic
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Created by Konstantine Arkoudas, and Mantained by AthenaFoundation
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: null
+status: unknown
+notes: New version has in-website playground but can also download. There are three available
+  courses for learning Athena. The material for these courses consists of thoughtfully curated
+  excerpts from the Athena book. There is User’s Guide for old version.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Programming LanguageProver
+    sourceExternalSoftware: NoYes
+    importedAt: 2026-07-28
+review:
+  needsReview: true
+  issues:
+    - 'Clarify the source value for external software: "NoYes".'

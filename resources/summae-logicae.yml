@@ -1,0 +1,43 @@
+id: summae-logicae
+title: Summae Logicae
+url: https://multisite7.usal.es/
+description: |-
+  A digital library that compiles resources in logic in the following branches:
+  – Foundations of logic,
+  – Logic systems,
+  – Applications,
+  – Logic studies,
+  – Teaching logic.
+features:
+  - "Biblioteca (Library): resources on the fundations of logic, logic systems, logic studies,
+    applications, and logic education"
+  - "Recursos digitales (Digital Resources): announcements, and a wide compilation of logic
+    resources on journals, projects, degrees, etc."
+  - "Glosario (Glossary): definitions of relevant words for logic"
+types:
+  - reference
+topics:
+  - general-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - "Enrique Alonso, Antonia Huertas, María Manzano, Andrei Moldovan y Belén Pérez Lancho.
+    (Contacto: María Manzano mara@usal.es)"
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education (online)
+    sourceResourceType: Digital library for students and researchers (resources mainly in Spanish)
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

@@ -1,0 +1,40 @@
+id: the-logic-machine
+title: The Logic Machine
+url: https://logic.tamu.edu/
+description: The Logic Machine, originally developed and hosted at Texas A&M University, provides
+  interactive logic software used for teaching introductory formal logic. The Daemon Proof Checker
+  checks proofs and can provide hints for students attempting to construct proofs in a natural
+  deduction system for sentential (propositional) and first-order predicate (quantifier) logic. The
+  Quizmaster provides a variety of exercises, from questions about basic concepts such as validity,
+  to wff construction and translation, to proofs, truth tables, and countermodels. The system and
+  exercises are based on Logic Primer (MIT Press, 2000) but the exercises are also suitable for use
+  with other texts, such as E.J. Lemmon’s Beginning Logic.
+types:
+  - book
+  - educational-software
+topics:
+  - predicate-logic
+  - proof-theory
+  - propositional-logic
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Colin Allen and Chris Menzel ©2006-2022
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: BookEducational Program
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

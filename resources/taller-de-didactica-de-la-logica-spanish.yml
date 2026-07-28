@@ -1,0 +1,34 @@
+id: taller-de-didactica-de-la-logica-spanish
+title: Taller de Didáctica de la Lógica (Spanish)
+url: https://www.filosoficas.unam.mx/~Tdl/TDL.htm
+description: Historical website from Academia Mexicana de Lógica
+features:
+  - It contains links to various websites with variety of resources, some of which are broken
+types:
+  - website
+topics:
+  - general-logic
+languages:
+  - en
+  - es
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Academia Mexicana de Lógica
+access:
+  cost: unknown
+  mode:
+    - online
+  requiresSoftware: false
+status: unknown
+notes: Will try out the links to discover more educational logic resources.
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Website
+    sourceExternalSoftware: No
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

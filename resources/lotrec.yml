@@ -1,0 +1,34 @@
+id: lotrec
+title: LoTREC
+url: https://www.irit.fr/Lotrec/
+description: |-
+  Generic Tableau Prover
+  Latest version (as of 14/07/2023): Feb 07, 2019
+types:
+  - website
+topics:
+  - modal-logic
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Lilac team
+access:
+  cost: unknown
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+notes: Requires download of software
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Resources on Logic Education
+    sourceResourceType: Modal Logic
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []

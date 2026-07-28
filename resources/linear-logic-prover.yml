@@ -1,0 +1,41 @@
+id: linear-logic-prover
+title: Linear Logic Prover
+url: https://cspsat.gitlab.io/llprover/
+description: This small program searches a cut-free proof of the given two-sided sequent of
+  first-order linear logic.
+features:
+  - The proof search of linear logic is undecidable. Therefore, this program limits the number of
+    contraction rules for each path of the proof at most three (this threshold value can be
+    changed).
+types:
+  - solver
+topics:
+  - predicate-logic
+  - proof-theory
+languages:
+  - en
+audiences:
+  - educators
+  - undergraduate
+authors:
+  - Naoyuki Tamura
+access:
+  cost: free
+  mode:
+    - download
+  requiresSoftware: true
+status: unknown
+notes: |-
+  There are further links in the website for resources. Some of these are likely broken.
+  Also, more on linear logic:
+  http://www.lcc.uma.es/~lopez/linear.html
+  Site includes user’s guide
+provenance:
+  - sourceUrl: https://resources.illc.uva.nl/Commission-on-Logic-Education/compilation-resources-on-logic-education/
+    sourceSection: Logic software and logic education
+    sourceResourceType: Prover
+    sourceExternalSoftware: Yes
+    importedAt: 2026-07-28
+review:
+  needsReview: false
+  issues: []
