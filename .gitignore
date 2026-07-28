@@ -4,3 +4,4 @@ dist/
 .DS_Store
 *.log
 suggestion-error.txt
+/private/

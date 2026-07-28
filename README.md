@@ -69,6 +69,34 @@ npm run build:site
 The `Deploy website` workflow validates the repository, regenerates `catalogue.json`, builds the
 site, and deploys the resulting artifact to GitHub Pages whenever `main` changes.
 
+## Maintainer notifications
+
+After a resource change reaches `main`, the `Notify resource maintainers` workflow emails the
+address associated with each affected record and includes the YAML diff. Messages are consolidated
+per recipient. Records whose `maintainerEmail` is `unknown` are skipped.
+
+For an existing record, the workflow always notifies the address in the previous version. When the
+address changes, it notifies both the previous and new addresses. A new record is sent to its new
+maintainer, and deletion notices go to the previous maintainer. Notifications run only after merge,
+never from untrusted pull-request code, and a safety limit prevents more than 100 messages per run.
+
+The sender is `Logic Education Resources <logic.education.resources@gmail.com>`. A repository
+administrator must configure it once:
+
+1. Enable 2-Step Verification on the Google account.
+2. Open the Google Account **App passwords** page and create an app password named
+   `GitHub catalogue notifications`.
+3. In the GitHub repository, open **Settings → Secrets and variables → Actions**.
+4. Add `CATALOGUE_EMAIL_USERNAME` with the value
+   `logic.education.resources@gmail.com`.
+5. Add `CATALOGUE_EMAIL_APP_PASSWORD` with the generated 16-character app password
+   (without display spaces).
+6. Keep recovery information for the Google account under Commission control. Changing the main
+   Google password revokes app passwords, so generate and save a new GitHub secret afterward.
+
+The app password is available only to the post-merge workflow and must never be placed in a YAML
+resource, source file, issue, pull request, or workflow log.
+
 ## Initial import
 
 The initial records were extracted from the Commission's public compilation on 28 July 2026. Each
