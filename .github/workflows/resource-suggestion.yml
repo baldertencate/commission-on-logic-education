@@ -68,11 +68,7 @@ jobs:
               --base main \
               --head "$BRANCH_NAME" \
               --title "Add suggested resource: $RESOURCE_ID" \
-              --body "Generated from and closes #${ISSUE_NUMBER}.
-
-The suggestion workflow converted the structured form into YAML and successfully ran the complete catalogue validation before opening this pull request.
-
-Automation run: ${run_url}")"
+              --body "$(printf 'Generated from and closes #%s.\n\nThe suggestion workflow converted the structured form into YAML and successfully ran the complete catalogue validation before opening this pull request.\n\nAutomation run: %s' "$ISSUE_NUMBER" "$run_url")")"
             echo "url=$pr_url" >> "$GITHUB_OUTPUT"
             echo "created=true" >> "$GITHUB_OUTPUT"
           fi
