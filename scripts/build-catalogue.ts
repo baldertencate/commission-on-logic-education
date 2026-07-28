@@ -15,5 +15,10 @@ const catalogue = {
   resources,
 };
 
-await fs.writeFile(path.join(ROOT, "catalogue.json"), stableJson(catalogue));
-console.log(`Built catalogue.json with ${resources.length} resources.`);
+const requestedOutput = process.argv[2];
+const outputFile = requestedOutput
+  ? path.resolve(ROOT, requestedOutput)
+  : path.join(ROOT, "catalogue.json");
+await fs.mkdir(path.dirname(outputFile), { recursive: true });
+await fs.writeFile(outputFile, stableJson(catalogue));
+console.log(`Built ${path.relative(ROOT, outputFile)} with ${resources.length} resources.`);

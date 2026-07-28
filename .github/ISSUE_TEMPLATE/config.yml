@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contribution guide
+    url: https://github.com/baldertencate/logic-education-resources/blob/main/CONTRIBUTING.md
+    about: Learn how to contribute resource files directly through GitHub.

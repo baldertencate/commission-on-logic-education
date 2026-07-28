@@ -14,6 +14,7 @@ taxonomy/                    Controlled vocabularies used by resources
 schema/resource.schema.json  Shared resource schema
 schema/catalogue.schema.json Schema for the generated catalogue
 scripts/                     Import, validation, and build tools
+src/                         Searchable catalogue website
 ```
 
 The YAML files are the source of truth. `catalogue.json` is generated deterministically for websites,
@@ -41,6 +42,31 @@ GitHub Actions then builds `catalogue.json` and publishes it as a downloadable w
 Future website deployments can run the same build directly from the reviewed YAML source.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow and curation guidance.
+
+## Website
+
+The static website loads the generated catalogue in the browser and provides:
+
+- instant, multi-word search across titles, descriptions, authors, features, and taxonomy
+- highlighted search terms and live result counts
+- responsive resource cards with canonical links and access details
+- guided **Edit this resource** links that explain YAML and the review process before opening GitHub
+- a structured **Suggest a new resource** form that is converted into a validated pull request
+
+Run the website locally:
+
+```sh
+npm run dev
+```
+
+Create the complete GitHub Pages output in `dist/`:
+
+```sh
+npm run build:site
+```
+
+The `Deploy website` workflow validates the repository, regenerates `catalogue.json`, builds the
+site, and deploys the resulting artifact to GitHub Pages whenever `main` changes.
 
 ## Initial import
 

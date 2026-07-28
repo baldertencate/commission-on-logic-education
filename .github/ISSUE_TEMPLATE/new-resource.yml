@@ -1,0 +1,180 @@
+name: Suggest a new resource
+description: Propose a resource for teaching or learning logic.
+title: "[Resource suggestion]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the catalogue.
+
+        Complete the structured fields below; you do not need to write YAML. After submission,
+        automation will create the resource file, check it, and open a pull request for maintainer
+        review. If the suggestion cannot be converted, a comment will explain what needs attention.
+  - type: input
+    id: title
+    attributes:
+      label: Resource title
+      placeholder: Logic in Action
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Canonical URL
+      description: Link directly to the resource rather than to a search result or intermediary page.
+      placeholder: https://example.org/resource
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the resource, and how could it help someone teach or learn logic?
+    validations:
+      required: true
+  - type: dropdown
+    id: types
+    attributes:
+      label: Resource types
+      description: Choose every type that applies.
+      multiple: true
+      options:
+        - Article
+        - Book
+        - Course
+        - Educational software
+        - Game or puzzle
+        - Reference or collection
+        - Slides
+        - Solver or prover
+        - Video
+        - Website
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: topics
+    attributes:
+      label: Logic topics
+      description: Choose every main subject covered.
+      multiple: true
+      options:
+        - General logic
+        - Propositional logic
+        - Predicate and first-order logic
+        - Modal logic
+        - Epistemic and dynamic epistemic logic
+        - Temporal logic
+        - Proof theory and natural deduction
+        - Automated reasoning
+        - Model checking and verification
+        - Argumentation and critical thinking
+        - History and philosophy of logic
+        - Digital and circuit logic
+        - Metalogic
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: languages
+    attributes:
+      label: Languages
+      description: Select all available languages, or “Multilingual or language-independent”.
+      multiple: true
+      options:
+        - English
+        - Spanish
+        - French
+        - German
+        - Dutch
+        - Multilingual or language-independent
+    validations:
+      required: true
+  - type: dropdown
+    id: audiences
+    attributes:
+      label: Intended audiences
+      description: Select every audience for which the resource is suitable.
+      multiple: true
+      options:
+        - Primary or secondary school
+        - Undergraduate students
+        - Graduate students
+        - Educators
+        - Researchers
+        - General public
+    validations:
+      required: true
+  - type: textarea
+    id: authors
+    attributes:
+      label: Authors or maintaining organizations
+      description: Enter one person or organization per line.
+  - type: textarea
+    id: features
+    attributes:
+      label: Notable features
+      description: Enter one feature per line, such as teaching materials, exercises, feedback, or downloads.
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Cost
+      options:
+        - Free
+        - Freemium
+        - Paid
+        - Unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: access_modes
+    attributes:
+      label: Access modes
+      description: Select every way in which the resource is available.
+      multiple: true
+      options:
+        - Online
+        - Download
+        - Physical
+    validations:
+      required: true
+  - type: dropdown
+    id: software
+    attributes:
+      label: Does it require downloaded software?
+      options:
+        - "No"
+        - "Yes"
+        - Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: platforms
+    attributes:
+      label: Platforms or required software
+      description: If relevant, enter one platform or software package per line.
+      placeholder: Web browser
+  - type: dropdown
+    id: registration
+    attributes:
+      label: Is registration required?
+      options:
+        - "No"
+        - "Yes"
+        - Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Add any factual information that does not fit above.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Final checks
+      options:
+        - label: I checked that this resource is not already in the catalogue.
+          required: true
+        - label: The information above is suitable for a public catalogue.
+          required: true

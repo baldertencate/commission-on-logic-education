@@ -1,0 +1,108 @@
+name: Turn resource suggestion into a pull request
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: resource-suggestion-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    if: >-
+      github.event.issue.state == 'open' &&
+      github.event.issue.body != null &&
+      contains(github.event.issue.body, '### Resource title') &&
+      contains(github.event.issue.body, '### Canonical URL')
+    runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: automation/resource-suggestion-${{ github.event.issue.number }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generate the resource file
+        id: generate
+        run: npm run generate:suggestion
+      - name: Validate the complete catalogue
+        run: npm test
+      - name: Commit the generated resource
+        env:
+          RESOURCE_FILE: ${{ steps.generate.outputs.resource_file }}
+          RESOURCE_ID: ${{ steps.generate.outputs.resource_id }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$BRANCH_NAME"
+          git add "$RESOURCE_FILE"
+          git commit -m "Add suggested resource: $RESOURCE_ID"
+          git push --force origin "$BRANCH_NAME"
+      - name: Open or update the pull request
+        id: pull_request
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          RESOURCE_ID: ${{ steps.generate.outputs.resource_id }}
+        run: |
+          existing_url="$(gh pr list --head "$BRANCH_NAME" --state open --json url --jq '.[0].url')"
+          if [ -n "$existing_url" ]; then
+            echo "url=$existing_url" >> "$GITHUB_OUTPUT"
+            echo "created=false" >> "$GITHUB_OUTPUT"
+          else
+            run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            pr_url="$(gh pr create \
+              --base main \
+              --head "$BRANCH_NAME" \
+              --title "Add suggested resource: $RESOURCE_ID" \
+              --body "Generated from and closes #${ISSUE_NUMBER}.
+
+The suggestion workflow converted the structured form into YAML and successfully ran the complete catalogue validation before opening this pull request.
+
+Automation run: ${run_url}")"
+            echo "url=$pr_url" >> "$GITHUB_OUTPUT"
+            echo "created=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Tell the contributor that the pull request is ready
+        if: steps.pull_request.outputs.created == 'true'
+        uses: actions/github-script@v7
+        env:
+          PULL_REQUEST_URL: ${{ steps.pull_request.outputs.url }}
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Thank you — the suggestion passed the automatic catalogue checks and is ready for maintainer review: ${process.env.PULL_REQUEST_URL}`,
+            });
+      - name: Explain an unsuccessful conversion
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            let detail = "The automation run did not complete successfully. A maintainer can inspect the linked run and help correct the suggestion.";
+            if (fs.existsSync("suggestion-error.txt")) {
+              detail = fs.readFileSync("suggestion-error.txt", "utf8").trim();
+            }
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `The suggestion could not yet be converted into a pull request:\n\n> ${detail.replace(/\n/g, "\n> ")}\n\nPlease edit the form response if needed. Editing the issue will run the conversion again. [View the automation run](${runUrl})`,
+            });

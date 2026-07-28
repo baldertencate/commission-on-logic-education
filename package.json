@@ -6,8 +6,14 @@
   "description": "A community-maintained catalogue of resources for teaching and learning logic.",
   "scripts": {
     "build": "tsx scripts/build-catalogue.ts",
+    "build:site": "vite build && tsx scripts/build-catalogue.ts dist/catalogue.json",
     "check": "tsx scripts/check.ts",
-    "test": "npm run check"
+    "dev": "npm run build && vite",
+    "generate:suggestion": "tsx scripts/create-resource-from-issue.ts",
+    "preview": "vite preview",
+    "test": "npm run check && npm run test:search && npm run test:suggestion",
+    "test:search": "tsx scripts/test-search.ts",
+    "test:suggestion": "tsx scripts/test-suggestion.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
@@ -16,6 +22,7 @@
     "cheerio": "^1.1.2",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
+    "vite": "^8.1.5",
     "yaml": "^2.8.1"
   },
   "engines": {
