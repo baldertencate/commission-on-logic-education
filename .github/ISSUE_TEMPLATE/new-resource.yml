@@ -8,8 +8,9 @@ body:
         Thank you for helping improve the catalogue.
 
         Complete the structured fields below; you do not need to write YAML. After submission,
-        automation will create the resource file, check it, and open a pull request for maintainer
-        review. If the suggestion cannot be converted, a comment will explain what needs attention.
+        automation will check the resource URL, create the resource file, validate it, and open a
+        pull request for maintainer review. If the suggestion cannot be converted, a comment will
+        explain what needs attention.
   - type: input
     id: title
     attributes:

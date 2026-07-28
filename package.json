@@ -7,13 +7,16 @@
   "scripts": {
     "build": "tsx scripts/build-catalogue.ts",
     "build:site": "vite build && tsx scripts/build-catalogue.ts dist/catalogue.json",
+    "audit:urls": "tsx scripts/audit-urls.ts",
     "check": "tsx scripts/check.ts",
+    "check:submitted-urls": "tsx scripts/submission-url-check.ts",
     "dev": "npm run build && vite",
     "generate:suggestion": "tsx scripts/create-resource-from-issue.ts",
     "preview": "vite preview",
-    "test": "npm run check && npm run test:search && npm run test:suggestion",
+    "test": "npm run check && npm run test:search && npm run test:suggestion && npm run test:url-check",
     "test:search": "tsx scripts/test-search.ts",
-    "test:suggestion": "tsx scripts/test-suggestion.ts"
+    "test:suggestion": "tsx scripts/test-suggestion.ts",
+    "test:url-check": "tsx scripts/test-url-check.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

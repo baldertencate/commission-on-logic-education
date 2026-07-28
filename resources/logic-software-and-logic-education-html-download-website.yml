@@ -34,5 +34,6 @@ provenance:
     sourceExternalSoftware: Yes
     importedAt: 2026-07-28
 review:
-  needsReview: false
-  issues: []
+  needsReview: true
+  issues:
+    - "URL audit: http://www.cs.otago.ac.nz/staffpriv/hans/logiccourseware.html appears stale (HTTP 404 Not Found)."

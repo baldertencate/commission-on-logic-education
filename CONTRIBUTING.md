@@ -85,6 +85,7 @@ Commit only the resource or taxonomy source files you changed. Pull requests are
 - JSON Schema conformance
 - unknown taxonomy values
 - duplicate IDs and normalized URLs
+- definite stale URLs in newly added resource records
 - mismatches between IDs and filenames
 - validity of the complete generated catalogue
 - TypeScript errors in the maintenance scripts
@@ -105,6 +106,18 @@ review:
 
 Resolve an issue when you can verify the correction from an authoritative source. Remove the
 resolved issue and set `needsReview` to `false` when no issues remain.
+
+The command `npm run audit:urls` checks all canonical and alternate URLs and synchronizes
+automatically managed `URL audit: ...` entries in `review.issues`. It follows redirects and retries
+with a small `GET` request when a server does not support `HEAD`. Definite failures such as `404`,
+`410`, or a nonexistent hostname are recorded for review. Timeouts, server errors, rate limits, and
+sites that restrict automated access are reported as warnings instead, because they do not reliably
+mean that a resource is stale. An inconclusive result does not clear an earlier stale-link issue;
+only a successful check does. Human-written review issues are never removed by the URL audit.
+Use `npm run audit:urls -- --dry-run` to inspect results without changing resource files.
+
+GitHub runs this audit monthly and opens or updates a pull request when review records change. It can
+also be started manually from the **Audit catalogue URLs** workflow.
 
 Broken or discontinued resources do not need to be deleted. Set `status` to `inactive` and explain
 the situation in `notes`; this preserves the historical record and prevents the same resource from

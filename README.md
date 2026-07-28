@@ -52,6 +52,7 @@ The static website loads the generated catalogue in the browser and provides:
 - responsive resource cards with canonical links and access details
 - guided **Edit this resource** links that explain YAML and the review process before opening GitHub
 - a structured **Suggest a new resource** form that is converted into a validated pull request
+- safe URL checks for new submissions and monthly catalogue-wide stale-link review
 
 Run the website locally:
 
