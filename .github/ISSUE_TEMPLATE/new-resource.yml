@@ -11,6 +11,10 @@ body:
         automation will check the resource URL, create the resource file, validate it, and open a
         pull request for maintainer review. If the suggestion cannot be converted, a comment will
         explain what needs attention.
+
+        This form is intended for the simple addition of one new resource. For more complex work,
+        such as changing existing or multiple resources, the schema, or the taxonomy, please
+        [manually create a GitHub pull request](https://github.com/baldertencate/logic-education-resources/blob/main/CONTRIBUTING.md).
   - type: input
     id: title
     attributes:
