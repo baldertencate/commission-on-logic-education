@@ -1,0 +1,31 @@
+id: teal-2026
+title: "TEAL 2026: Tools for Educational Activities in Logic"
+description: |-
+  A workshop held as part of [FLoC 2026](https://www.floc26.org/).
+
+  **Time:** 09:00–17:00 WEST
+
+  **Room:** [C6.01](https://program.floc26.org/room67)
+
+  ## Goal
+
+  TEAL is a venue for work on tools for learning about logic. It was designed to take advantage of the many communities gathering for FLoC, with an emphasis on lively interaction, exchanging practical knowledge, and growing the community rather than creating another publication venue.
+
+  ## Morning programme
+
+  - **09:00–09:05:** Introduction
+  - **09:05–09:25:** SAT-IT, an online interactive SAT tracer
+  - **09:25–09:45:** Logic for Fun demonstration
+  - **09:45–10:05:** LogicProof, an interactive educational theorem prover for natural deduction and sequent calculus
+  - **10:05–10:20:** Coffee break
+  - **10:20–11:00:** Shared-time demonstrations, including SAT-IT, Logic for Fun, LogicProof, Learn-Heptagon, LAP, and CAFÉ
+  - **11:00–11:05:** Teardown
+  - **11:05–11:25:** Teaching LTL and ω-automata with Spot
+  - **11:25–11:45:** Tempus Fugit, a game-based introduction to temporal logic
+  - **11:45–13:30:** Lunch
+startDate: "2026-07-26"
+endDate: "2026-07-26"
+format: physical
+location: Room C6.01, Lisbon, Portugal
+eventType: workshop
+eventUrl: https://teal.cs.brown.edu/floc2026/

@@ -3,9 +3,12 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { createRequire } from "node:module";
 import type { ErrorObject } from "ajv";
+import { eventDatesAreOrdered, eventDuplicateKey } from "./event-validation.js";
 import {
+  listEventFiles,
   listResourceFiles,
   normalizeUrl,
+  readEvent,
   readResource,
   readTaxonomy,
   ROOT,
@@ -21,6 +24,13 @@ type Resource = {
   audiences: string[];
 };
 
+type Event = {
+  id: string;
+  title: string;
+  startDate: string;
+  endDate: string;
+};
+
 const require = createRequire(import.meta.url);
 const Ajv2020 = require("ajv/dist/2020").default as typeof import("ajv/dist/2020.js").default;
 const addFormats = require("ajv-formats").default as typeof import("ajv-formats").default;
@@ -30,15 +40,27 @@ const resourceSchema = JSON.parse(
 const catalogueSchema = JSON.parse(
   await fs.readFile(path.join(ROOT, "schema", "catalogue.schema.json"), "utf8"),
 );
+const eventSchema = JSON.parse(
+  await fs.readFile(path.join(ROOT, "schema", "event.schema.json"), "utf8"),
+);
+const eventsSchema = JSON.parse(
+  await fs.readFile(path.join(ROOT, "schema", "events.schema.json"), "utf8"),
+);
 const ajv = new Ajv2020({ allErrors: true, strict: true });
 addFormats(ajv);
 ajv.addSchema(resourceSchema);
+ajv.addSchema(eventSchema);
 const validateResource = ajv.getSchema(resourceSchema.$id);
 if (!validateResource) throw new Error("Could not compile resource.schema.json");
 const validateCatalogue = ajv.compile(catalogueSchema);
+const validateEvent = ajv.getSchema(eventSchema.$id);
+if (!validateEvent) throw new Error("Could not compile event.schema.json");
+const validateEvents = ajv.compile(eventsSchema);
 const files = await listResourceFiles();
+const eventFiles = await listEventFiles();
 const errors: string[] = [];
 const entries: Array<{ file: string; resource: Resource }> = [];
+const eventEntries: Array<{ file: string; event: Event }> = [];
 
 function formatErrors(file: string, details: ErrorObject[] | null | undefined) {
   for (const detail of details ?? []) {
@@ -50,6 +72,12 @@ for (const file of files) {
   const value = await readResource(file);
   if (!validateResource(value)) formatErrors(file, validateResource.errors);
   else entries.push({ file, resource: value as Resource });
+}
+
+for (const file of eventFiles) {
+  const value = await readEvent(file);
+  if (!validateEvent(value)) formatErrors(file, validateEvent.errors);
+  else eventEntries.push({ file, event: value as Event });
 }
 
 const taxonomyNames = ["resource-types", "topics", "audiences"] as const;
@@ -100,6 +128,33 @@ for (const { file, resource } of entries) {
   }
 }
 
+const seenEventIds = new Map<string, string>();
+const seenEvents = new Map<string, string>();
+for (const { file, event } of eventEntries) {
+  const expectedFile = `events/${event.id}.yml`;
+  const actualFile = path.relative(ROOT, file);
+  if (actualFile !== expectedFile) {
+    errors.push(`${actualFile} must be named ${expectedFile}`);
+  }
+
+  const previousId = seenEventIds.get(event.id);
+  if (previousId) {
+    errors.push(`duplicate event id "${event.id}" in ${previousId} and ${actualFile}`);
+  }
+  seenEventIds.set(event.id, actualFile);
+
+  if (!eventDatesAreOrdered(event)) {
+    errors.push(`${actualFile} endDate must not be before startDate`);
+  }
+
+  const eventKey = eventDuplicateKey(event);
+  const previousEvent = seenEvents.get(eventKey);
+  if (previousEvent) {
+    errors.push(`possible duplicate event in ${previousEvent} and ${actualFile}`);
+  }
+  seenEvents.set(eventKey, actualFile);
+}
+
 const catalogue = {
   schemaVersion: 1,
   resources: entries.map(({ resource }) => resource).sort((a, b) => a.id.localeCompare(b.id)),
@@ -107,6 +162,21 @@ const catalogue = {
 if (!validateCatalogue(catalogue)) {
   for (const detail of validateCatalogue.errors ?? []) {
     errors.push(`generated catalogue${detail.instancePath || "/"} ${detail.message}`);
+  }
+}
+
+const events = {
+  schemaVersion: 1,
+  events: eventEntries
+    .map(({ event }) => event)
+    .sort(
+      (a, b) =>
+        b.startDate.localeCompare(a.startDate) || a.id.localeCompare(b.id),
+    ),
+};
+if (!validateEvents(events)) {
+  for (const detail of validateEvents.errors ?? []) {
+    errors.push(`generated events${detail.instancePath || "/"} ${detail.message}`);
   }
 }
 
@@ -125,4 +195,6 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Validated ${entries.length} resources, taxonomies, URLs, and generated catalogue.`);
+console.log(
+  `Validated ${entries.length} resources, ${eventEntries.length} events, taxonomies, URLs, and generated collections.`,
+);

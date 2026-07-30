@@ -41,6 +41,7 @@ const errorTemplate = getElement<HTMLTemplateElement>("error-template");
 const editDialog = getElement<HTMLDialogElement>("edit-dialog");
 const editDialogTitle = getElement<HTMLHeadingElement>("edit-dialog-title");
 const editContinue = getElement<HTMLAnchorElement>("edit-continue");
+const editRemove = getElement<HTMLAnchorElement>("edit-remove");
 const editClose = getElement<HTMLButtonElement>("edit-close");
 const editCancel = getElement<HTMLButtonElement>("edit-cancel");
 const suggestLink = getElement<HTMLAnchorElement>("suggest-resource");
@@ -172,6 +173,9 @@ function buildResourceCard(resource: Resource, terms: string[]): HTMLElement {
     event.preventDefault();
     editDialogTitle.textContent = `Edit “${resource.title}”`;
     editContinue.href = editLink.href;
+    const removalTitle = `[Removal suggestion]: ${resource.title} (${resource.id})`;
+    editRemove.href =
+      `${repositoryUrl}/issues/new?template=remove-resource.yml&title=${encodeURIComponent(removalTitle)}`;
     editDialog.showModal();
   });
   header.append(heading, editLink);
@@ -243,7 +247,7 @@ for (const dialog of [editDialog, suggestDialog]) {
 
 async function loadCatalogue(): Promise<void> {
   try {
-    const response = await fetch("./catalogue.json");
+    const response = await fetch("../catalogue.json");
     if (!response.ok) throw new Error(`Catalogue request failed: ${response.status}`);
     const catalogue = await response.json() as Catalogue;
     resources = catalogue.resources.sort((left, right) => left.title.localeCompare(right.title));

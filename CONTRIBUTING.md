@@ -119,22 +119,20 @@ Use `npm run audit:urls -- --dry-run` to inspect results without changing resour
 GitHub runs this audit monthly and opens or updates a pull request when review records change. It can
 also be started manually from the **Audit catalogue URLs** workflow.
 
-## Discover possible maintainers
-
-Run `npm run discover:maintainers` to inspect resource records whose `maintainerEmail` is `unknown`.
-The script visits only the resource site and a few same-site contact, about, author, or team pages.
-It ranks publicly displayed email addresses and saves candidates, evidence, and resources without a
-candidate to `private/maintainer-email-candidates.csv`.
-
-The `private/` directory is excluded from Git. The output file is created with user-only file
-permissions and the script does not print discovered addresses to the terminal. Review every
-candidate before contacting anyone or changing a catalogue record; a match is a lead, not proof that
-the person has agreed to maintain the entry. Use `npm run discover:maintainers -- --help` for
-filtering and crawl-limit options.
-
 Broken or discontinued resources do not need to be deleted. Set `status` to `inactive` and explain
 the situation in `notes`; this preserves the historical record and prevents the same resource from
 being repeatedly rediscovered.
+
+## Add or edit an event
+
+Each event lives in `events/<id>.yml` and must follow
+[`schema/event.schema.json`](schema/event.schema.json). Dates use `YYYY-MM-DD`; use the same date
+for `startDate` and `endDate` for a one-day event. Physical and hybrid events require `location`,
+while online events omit it. Put details that do not have a dedicated field—such as speakers,
+organizers, schedules, and time-zone information—in `description`.
+
+Run `npm test` to validate event filenames, schema fields, date order, and possible duplicate events.
+Run `npm run build:events` to generate the ignored `events.json` collection locally.
 
 ## Change the schema or taxonomy
 
