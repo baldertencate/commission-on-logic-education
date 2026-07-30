@@ -11,6 +11,7 @@ export default defineConfig({
         home: path.resolve(import.meta.dirname, "index.html"),
         resources: path.resolve(import.meta.dirname, "resources", "index.html"),
         events: path.resolve(import.meta.dirname, "events", "index.html"),
+        about: path.resolve(import.meta.dirname, "about", "index.html"),
       },
     },
   },

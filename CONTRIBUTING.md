@@ -131,6 +131,10 @@ for `startDate` and `endDate` for a one-day event. Physical and hybrid events re
 while online events omit it. Put details that do not have a dedicated field—such as speakers,
 organizers, schedules, and time-zone information—in `description`.
 
+For a simple addition, use the website’s **Suggest an event** button. The structured issue form is
+converted into an event YAML file, checked for duplicate events and stale submitted URLs, validated,
+and opened as a pull request for review. Contributors do not need to write YAML for this route.
+
 Run `npm test` to validate event filenames, schema fields, date order, and possible duplicate events.
 Run `npm run build:events` to generate the ignored `events.json` collection locally.
 

@@ -1,0 +1,96 @@
+name: Suggest a new event
+description: Propose an event related to logic education.
+title: "[Event suggestion]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping maintain the events catalogue.
+
+        Complete the fields below; you do not need to write YAML. Automation will create and
+        validate the event file, then open a pull request for maintainer review.
+
+        This form is intended for adding one event. For changes to existing events, multiple
+        records, or the schema, please
+        [manually create a pull request](https://github.com/baldertencate/logic-education-resources/blob/main/CONTRIBUTING.md).
+  - type: input
+    id: title
+    attributes:
+      label: Event title
+      placeholder: Logic Education Workshop 2027
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Include useful details such as speakers, organisers, programme, and intended audience. Markdown is supported.
+    validations:
+      required: true
+  - type: input
+    id: start_date
+    attributes:
+      label: Start date
+      description: Use YYYY-MM-DD.
+      placeholder: "2027-06-15"
+    validations:
+      required: true
+  - type: input
+    id: end_date
+    attributes:
+      label: End date
+      description: Use YYYY-MM-DD. For a one-day event, repeat the start date.
+      placeholder: "2027-06-15"
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options:
+        - Online
+        - Physical
+        - Hybrid
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Required for physical and hybrid events. Leave blank for online events.
+      placeholder: Amsterdam, Netherlands
+  - type: dropdown
+    id: event_type
+    attributes:
+      label: Event type
+      options:
+        - Conference
+        - Course
+        - Panel discussion
+        - Seminar
+        - Webinar
+        - Workshop
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: event_url
+    attributes:
+      label: Event URL
+      description: Optional. Link to the event's own page, not to this catalogue.
+      placeholder: https://example.org/event
+  - type: input
+    id: recording_url
+    attributes:
+      label: Recording URL
+      description: Optional. Link to a recording of the event.
+      placeholder: https://www.youtube.com/watch?v=example
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Final checks
+      options:
+        - label: I checked that this event is not already in the catalogue.
+          required: true
+        - label: The information above is suitable for a public catalogue.
+          required: true

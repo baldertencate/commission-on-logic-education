@@ -12,6 +12,12 @@
   </head>
   <body>
     <main class="page-shell page-shell--landing">
+      <nav class="section-nav" aria-label="Catalogue sections">
+        <a href="./" aria-current="page">Home</a>
+        <a href="./resources/">Resources</a>
+        <a href="./events/">Events</a>
+        <a href="./about/">About</a>
+      </nav>
       <section class="masthead masthead--landing" aria-labelledby="page-title">
         <div class="masthead__eyebrow">IUHPST/DLMPST Commission on Logic Education</div>
         <div class="masthead__heading">
@@ -35,7 +41,18 @@
           <span>View upcoming events and browse the archive of past logic education events.</span>
           <span class="collection-choice__action">Browse events →</span>
         </a>
+        <a class="collection-choice" href="./about/">
+          <span class="collection-choice__eyebrow">Meet the Commission</span>
+          <strong>About</strong>
+          <span>Learn about the Commission members and connect with the wider community.</span>
+          <span class="collection-choice__action">About the Commission →</span>
+        </a>
       </nav>
+
+      <section class="community-strip" aria-label="Community links">
+        <span>Stay connected</span>
+        <a href="https://list.uva.nl/postorius/lists/logic-and-education.list.uva.nl" target="_blank" rel="noopener noreferrer">Mailing list ↗</a>
+      </section>
     </main>
 
     <script type="module" src="/src/landing.ts"></script>
