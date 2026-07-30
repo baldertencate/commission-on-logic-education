@@ -102,13 +102,23 @@ select {
 .masthead__logo {
   display: block;
   border-radius: 2px;
-  background: white;
+  background: transparent;
+}
+
+.masthead__logo-link {
+  display: block;
+  border-radius: 3px;
+}
+
+.masthead__logo-link:hover,
+.masthead__logo-link:focus-visible {
+  box-shadow: 0 0 0 3px rgb(23 50 77 / 24%);
 }
 
 .masthead__logo--commission {
-  width: 154px;
-  height: 69px;
-  object-fit: cover;
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -1099,8 +1109,8 @@ mark {
   }
 
   .masthead__logo--commission {
-    width: 138px;
-    height: 62px;
+    width: 76px;
+    height: 76px;
   }
 
   .masthead__logo--dlmpst {
