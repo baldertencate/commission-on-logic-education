@@ -66,6 +66,8 @@ The static website has a landing page and two collection routes:
   - automatic Upcoming and Past sections based on each event's end date
   - reverse-chronological ordering
   - expandable event descriptions, recording links, and direct editing links
+  - a structured event suggestion form that generates a validated pull request
+- `about/` introduces the Commission members and links to its YouTube channel and mailing list
 
 Resource URLs receive safe checks on new submissions and during the monthly catalogue-wide
 stale-link review.

@@ -14,6 +14,10 @@ const upcomingCount = getElement<HTMLParagraphElement>("upcoming-count");
 const pastCount = getElement<HTMLParagraphElement>("past-count");
 const upcomingEmpty = getElement<HTMLParagraphElement>("upcoming-empty");
 const errorTemplate = getElement<HTMLTemplateElement>("event-error-template");
+const addEvent = getElement<HTMLAnchorElement>("add-event");
+const eventSuggestDialog = getElement<HTMLDialogElement>("event-suggest-dialog");
+const eventSuggestClose = getElement<HTMLButtonElement>("event-suggest-close");
+const eventSuggestCancel = getElement<HTMLButtonElement>("event-suggest-cancel");
 
 function getElement<T extends HTMLElement>(id: string): T {
   const value = document.getElementById(id);
@@ -148,6 +152,16 @@ function renderList(container: HTMLElement, events: EventRecord[]): void {
 function countLabel(count: number): string {
   return `${count} ${count === 1 ? "event" : "events"}`;
 }
+
+addEvent.addEventListener("click", (event) => {
+  event.preventDefault();
+  eventSuggestDialog.showModal();
+});
+eventSuggestClose.addEventListener("click", () => eventSuggestDialog.close());
+eventSuggestCancel.addEventListener("click", () => eventSuggestDialog.close());
+eventSuggestDialog.addEventListener("click", (event) => {
+  if (event.target === eventSuggestDialog) eventSuggestDialog.close();
+});
 
 async function loadEvents(): Promise<void> {
   try {

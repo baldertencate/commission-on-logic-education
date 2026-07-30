@@ -16,6 +16,7 @@
         <a href="../">Home</a>
         <a href="../resources/">Resources</a>
         <a href="./" aria-current="page">Events</a>
+        <a href="../about/">About</a>
       </nav>
 
       <section class="masthead" aria-labelledby="page-title">
@@ -26,12 +27,12 @@
             <p>A community-maintained list of events for logic educators and learners.</p>
           </div>
           <a
+            id="add-event"
             class="button button--light"
-            href="https://github.com/baldertencate/logic-education-resources/tree/main/events"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://github.com/baldertencate/logic-education-resources/issues/new?template=new-event.yml"
+            aria-haspopup="dialog"
           >
-            View event data
+            Add an event
           </a>
         </div>
       </section>
@@ -68,6 +69,46 @@
         <p>Please refresh the page or try again later.</p>
       </div>
     </template>
+
+    <dialog class="contribution-dialog" id="event-suggest-dialog" aria-labelledby="event-suggest-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="dialog-eyebrow">Expand the events catalogue</p>
+          <h2 id="event-suggest-title">Suggest a new event</h2>
+        </div>
+        <button class="dialog-close" id="event-suggest-close" type="button" aria-label="Close">×</button>
+      </div>
+
+      <p class="dialog-intro">
+        You will complete a structured GitHub form.
+      </p>
+      <ol class="contribution-steps">
+        <li><strong>Sign in to GitHub</strong> with a free account.</li>
+        <li>
+          <strong>Describe the event</strong>, including its dates, format, location when
+          applicable, event type, and any event or recording links.
+        </li>
+        <li>
+          <strong>Submit the suggestion.</strong>
+          Automation will check the dates, possible duplicates, submitted links, and schema before
+          creating a pull request for maintainer review. If it cannot do so, it will reply with an
+          explanation.
+        </li>
+      </ol>
+      <div class="dialog-actions">
+        <button class="button button--secondary" id="event-suggest-cancel" type="button">
+          Cancel
+        </button>
+        <a
+          class="button button--primary"
+          href="https://github.com/baldertencate/logic-education-resources/issues/new?template=new-event.yml"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Continue to suggestion form
+        </a>
+      </div>
+    </dialog>
 
     <script type="module" src="/src/events.ts"></script>
   </body>
