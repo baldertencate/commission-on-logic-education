@@ -1,0 +1,18 @@
+id: machine-learning-and-logic-fast-and-slow-thinking-2025
+title: "Machine Learning and Logic: Fast and Slow Thinking"
+description: |-
+  **Speaker:** Professor Moshe Y. Vardi, Rice University
+
+  **Times:** 07:00 CST, 13:00 GMT, 14:00 CET, 18:30 IST, and 21:00 in Beijing
+
+  ## Abstract
+
+  The webinar considered the apparent shift in computer science from well-understood formal models toward large datasets and machine learning, exemplified by artificial intelligence's movement from logic programming to deep learning.
+
+  Vardi argued that this is better understood as an expansion rather than a replacement: just as general relativity augments Newtonian mechanics, data-driven computing augments model-driven computing. He related machine learning and logic to fast and slow modes of human thought.
+
+  The talk addressed the challenge of integrating the model-driven and data-driven paradigms, presented an approach based on making logic more quantitative, and concluded with implications for computer-science education.
+startDate: "2025-01-14"
+endDate: "2025-01-14"
+format: online
+eventType: webinar

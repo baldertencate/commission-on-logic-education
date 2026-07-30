@@ -10,15 +10,19 @@ page.
 
 ```text
 resources/                   One reviewed YAML file per resource
+events/                      One reviewed YAML file per event
 taxonomy/                    Controlled vocabularies for types, topics, and audiences
 schema/resource.schema.json  Shared resource schema
 schema/catalogue.schema.json Schema for the generated catalogue
+schema/event.schema.json     Shared event schema
+schema/events.schema.json    Schema for the generated events collection
 scripts/                     Import, validation, and build tools
 src/                         Searchable catalogue website
 ```
 
-The YAML files are the source of truth. `catalogue.json` is generated deterministically for websites,
-search indexes, and other consumers; it is ignored by Git and should not be committed.
+The YAML files are the source of truth. `catalogue.json` and `events.json` are generated
+deterministically for websites, search indexes, and other consumers; they are ignored by Git and
+should not be committed.
 
 ## Work with the catalogue
 
@@ -29,7 +33,7 @@ npm install
 npm test
 ```
 
-To build the merged catalogue locally:
+To build both merged collections locally:
 
 ```sh
 npm run build
@@ -41,18 +45,30 @@ complete generated catalogue in memory. The same checks run automatically on pul
 GitHub Actions then builds `catalogue.json` and publishes it as a downloadable workflow artifact.
 Future website deployments can run the same build directly from the reviewed YAML source.
 
+The event collection is intentionally lightweight. Each event has an ID, title, description,
+start and end dates, format, event type, and event URL. Physical and hybrid events also require a
+location; a recording URL is optional. `npm test` validates the schema, filenames, date order, and
+possible duplicates. Events are generated newest first in `events.json`.
+
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow and curation guidance.
 
 ## Website
 
-The static website loads the generated catalogue in the browser and provides:
+The static website has a landing page and two collection routes:
 
-- instant, multi-word search across titles, descriptions, authors, features, and taxonomy
-- highlighted search terms and live result counts
-- responsive resource cards with canonical links and access details
-- guided **Edit this resource** links that explain YAML and the review process before opening GitHub
-- a structured **Suggest a new resource** form that is converted into a validated pull request
-- safe URL checks for new submissions and monthly catalogue-wide stale-link review
+- `resources/` loads the generated resource catalogue and provides:
+  - instant, multi-word search across titles, descriptions, authors, features, and taxonomy
+  - highlighted search terms and live result counts
+  - responsive resource cards with canonical links and access details
+  - guided **Edit this resource** links that explain YAML and the review process before opening GitHub
+  - a structured **Suggest a new resource** form that is converted into a validated pull request
+- `events/` loads the generated event collection and provides:
+  - automatic Upcoming and Past sections based on each event's end date
+  - reverse-chronological ordering
+  - expandable event descriptions, recording links, and direct editing links
+
+Resource URLs receive safe checks on new submissions and during the monthly catalogue-wide
+stale-link review.
 
 Run the website locally:
 
@@ -120,3 +136,12 @@ The top-level format is intentionally small and stable:
 
 Consumers should use `id` as the durable resource identifier and should tolerate new optional fields
 being added in future schema versions.
+
+The generated event collection follows the same pattern:
+
+```json
+{
+  "schemaVersion": 1,
+  "events": []
+}
+```

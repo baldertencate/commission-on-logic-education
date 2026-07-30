@@ -29,7 +29,9 @@ jobs:
       - run: npm run build:site
       - uses: actions/upload-artifact@v4
         with:
-          name: catalogue-${{ github.sha }}
-          path: catalogue.json
+          name: generated-data-${{ github.sha }}
+          path: |
+            catalogue.json
+            events.json
           if-no-files-found: error
           retention-days: 14

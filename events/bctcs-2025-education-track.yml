@@ -1,0 +1,25 @@
+id: bctcs-2025-education-track
+title: "BCTCS 2025 Education Track"
+description: |-
+  An education track at the British Colloquium for Theoretical Computer Science, hosted by the University of Strathclyde.
+
+  ## Contributed talks
+
+  The focused education track took place on Wednesday 16 April. It invited proposals for 20- or 30-minute talks about teaching experiences, challenges, and innovations in theoretical computer science.
+
+  Topics could range from introductory courses to computational complexity, quantum computing, algorithmic game theory, model checking, programming-language theory, and semantics. A central theme was how theoretical computer science can remain a foundational, engaging, and relevant part of computer-science education amid emerging technologies such as generative AI.
+
+  Submissions did not need to be original or unpublished. There were no formal proceedings, but the contributed abstracts were to appear in the [EATCS Bulletin](https://eatcs.org/index.php/eatcs-bulletin).
+
+  **Education-track chairs:**
+
+  - Oana Andrei, University of Glasgow
+  - Alasdair Lambert, University of Strathclyde
+
+  The track was sponsored by the Scottish Informatics and Computer Science Alliance (SICSA).
+startDate: "2025-04-14"
+endDate: "2025-04-16"
+format: physical
+location: University of Strathclyde, Glasgow, United Kingdom
+eventType: conference
+eventUrl: https://msp.cis.strath.ac.uk/bctcs2025/

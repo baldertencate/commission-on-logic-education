@@ -184,6 +184,32 @@ assert.equal(
   "Maintainer agreement must be required",
 );
 
+const removalForm = parseYaml(
+  await fs.readFile(path.join(ROOT, ".github", "ISSUE_TEMPLATE", "remove-resource.yml"), "utf8"),
+) as IssueForm;
+for (const label of [
+  "Resource ID",
+  "Resource URL",
+  "Why should this resource be reviewed for removal?",
+  "Explanation",
+  "Final check",
+]) {
+  const field = removalForm.body.find((item) => item.attributes?.label === label);
+  assert(field, `Removal form must include “${label}”`);
+  assert.equal(field.validations?.required ?? label === "Final check", true);
+}
+const removalFinalCheck = removalForm.body.find(
+  (item) => item.attributes?.label === "Final check",
+);
+const removalAgreement = removalFinalCheck?.attributes?.options?.find(
+  (option) => typeof option !== "string" && option.label.startsWith("I understand"),
+);
+assert.equal(
+  typeof removalAgreement === "string" ? false : removalAgreement?.required,
+  true,
+  "Removal review acknowledgement must be required",
+);
+
 assert.deepEqual(
   (generated.resource as { languages?: string[] }).languages,
   ["en", "es"],

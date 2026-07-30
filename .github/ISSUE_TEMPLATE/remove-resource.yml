@@ -1,0 +1,62 @@
+name: Suggest removing a resource
+description: Ask the catalogue maintainers to review whether a resource should be removed or marked inactive.
+title: "[Removal suggestion]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep the catalogue useful and accurate.
+
+        Submitting this form does not immediately delete anything. A catalogue maintainer will
+        review whether the record should be removed, marked inactive, merged with a duplicate, or
+        updated instead. Keeping an inactive record may be preferable when a resource has historical
+        value or could return later.
+  - type: input
+    id: resource_id
+    attributes:
+      label: Resource ID
+      description: Copy the ID from the resource's YAML filename or from the prefilled issue title.
+      placeholder: my-logic-resource
+    validations:
+      required: true
+  - type: input
+    id: resource_url
+    attributes:
+      label: Resource URL
+      description: Enter the catalogue URL for the resource you want reviewed.
+      placeholder: https://example.org/resource
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Why should this resource be reviewed for removal?
+      options:
+        - It duplicates another catalogue entry
+        - It is permanently unavailable or discontinued
+        - It is outside the scope of logic education
+        - The resource owner requests removal
+        - It contains harmful, misleading, or inappropriate material
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: explanation
+    attributes:
+      label: Explanation
+      description: Explain the reason and include any evidence that will help reviewers decide.
+    validations:
+      required: true
+  - type: input
+    id: replacement
+    attributes:
+      label: Replacement or successor URL
+      description: If the resource moved or has a successor, provide its URL here.
+      placeholder: https://example.org/new-resource
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Final check
+      options:
+        - label: I understand that this is a review request and the resource will not be removed automatically.
+          required: true

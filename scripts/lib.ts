@@ -7,7 +7,15 @@ export const ROOT = path.resolve(import.meta.dirname, "..");
 export type TaxonomyItem = { id: string; label: string };
 
 export async function listResourceFiles(): Promise<string[]> {
-  const directory = path.join(ROOT, "resources");
+  return listYamlFiles("resources");
+}
+
+export async function listEventFiles(): Promise<string[]> {
+  return listYamlFiles("events");
+}
+
+async function listYamlFiles(directoryName: string): Promise<string[]> {
+  const directory = path.join(ROOT, directoryName);
   const entries = await fs.readdir(directory, { withFileTypes: true });
   return entries
     .filter((entry) => entry.isFile() && /\.ya?ml$/i.test(entry.name))
@@ -16,6 +24,10 @@ export async function listResourceFiles(): Promise<string[]> {
 }
 
 export async function readResource(file: string): Promise<unknown> {
+  return parseYaml(await fs.readFile(file, "utf8"));
+}
+
+export async function readEvent(file: string): Promise<unknown> {
   return parseYaml(await fs.readFile(file, "utf8"));
 }
 

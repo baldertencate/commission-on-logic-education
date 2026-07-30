@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logic-education-resources.example/schema/event.schema.json",
+  "title": "Logic education event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "description",
+    "startDate",
+    "endDate",
+    "format",
+    "eventType"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "format": {
+      "type": "string",
+      "enum": ["online", "physical", "hybrid"]
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "eventType": {
+      "type": "string",
+      "enum": [
+        "conference",
+        "course",
+        "panel-discussion",
+        "seminar",
+        "webinar",
+        "workshop",
+        "other"
+      ]
+    },
+    "eventUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "recordingUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "images": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "alt"],
+        "properties": {
+          "url": {
+            "type": "string",
+            "pattern": "^(?:https?://|\\.{1,2}/)"
+          },
+          "alt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "caption": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "format": {
+            "enum": ["physical", "hybrid"]
+          }
+        },
+        "required": ["format"]
+      },
+      "then": {
+        "properties": {
+          "location": {}
+        },
+        "required": ["location"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "format": {
+            "const": "online"
+          }
+        },
+        "required": ["format"]
+      },
+      "then": {
+        "properties": {
+          "location": false
+        }
+      }
+    }
+  ]
+}

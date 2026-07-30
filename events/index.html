@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Upcoming and past events related to logic education."
+    />
+    <meta name="theme-color" content="#17324d" />
+    <title>Logic Education Events</title>
+  </head>
+  <body>
+    <main class="page-shell">
+      <nav class="section-nav" aria-label="Catalogue sections">
+        <a href="../">Home</a>
+        <a href="../resources/">Resources</a>
+        <a href="./" aria-current="page">Events</a>
+      </nav>
+
+      <section class="masthead" aria-labelledby="page-title">
+        <div class="masthead__eyebrow">IUHPST/DLMPST Commission on Logic Education</div>
+        <div class="masthead__heading">
+          <div>
+            <h1 id="page-title">Logic Education Events</h1>
+            <p>A community-maintained list of events for logic educators and learners.</p>
+          </div>
+          <a
+            class="button button--light"
+            href="https://github.com/baldertencate/logic-education-resources/tree/main/events"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View event data
+          </a>
+        </div>
+      </section>
+
+      <section class="event-section" aria-labelledby="upcoming-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-heading__eyebrow">What is ahead</p>
+            <h2 id="upcoming-title">Upcoming events</h2>
+          </div>
+          <p id="upcoming-count" class="section-heading__count">Loading…</p>
+        </div>
+        <div id="upcoming-events" class="event-list" aria-busy="true"></div>
+        <p id="upcoming-empty" class="collection-empty" hidden>
+          No upcoming events are currently listed.
+        </p>
+      </section>
+
+      <section class="event-section" aria-labelledby="past-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-heading__eyebrow">Archive</p>
+            <h2 id="past-title">Past events</h2>
+          </div>
+          <p id="past-count" class="section-heading__count">Loading…</p>
+        </div>
+        <div id="past-events" class="event-list" aria-busy="true"></div>
+      </section>
+    </main>
+
+    <template id="event-error-template">
+      <div class="error-state" role="alert">
+        <h2>The events could not be loaded</h2>
+        <p>Please refresh the page or try again later.</p>
+      </div>
+    </template>
+
+    <script type="module" src="/src/events.ts"></script>
+  </body>
+</html>
