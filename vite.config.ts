@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import path from "node:path";
 
 export default defineConfig({
-  base: "/logic-education-resources/",
+  base: "/commission-on-logic-education/",
   build: {
     outDir: "dist",
     emptyOutDir: true,

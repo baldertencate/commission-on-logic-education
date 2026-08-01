@@ -14,7 +14,7 @@ body:
 
         This form is intended for the simple addition of one new resource. For more complex work,
         such as changing existing or multiple resources, the schema, or the taxonomy, please
-        [manually create a GitHub pull request](https://github.com/baldertencate/logic-education-resources/blob/main/CONTRIBUTING.md).
+        [manually create a GitHub pull request](https://github.com/baldertencate/commission-on-logic-education/blob/main/CONTRIBUTING.md).
   - type: input
     id: title
     attributes:

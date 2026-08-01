@@ -199,7 +199,7 @@ async function requestWithRedirects(
         redirect: "manual",
         signal: AbortSignal.timeout(options.timeoutMs),
         headers: {
-          "User-Agent": "logic-education-resources-url-checker/1.0",
+          "User-Agent": "commission-on-logic-education-url-checker/1.0",
           Accept: "text/html,application/xhtml+xml,application/json;q=0.8,*/*;q=0.5",
           ...(method === "GET" ? { Range: "bytes=0-0" } : {}),
         },

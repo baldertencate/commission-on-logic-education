@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://logic-education-resources.example/schema/events.schema.json",
+  "$id": "https://commission-on-logic-education.example/schema/events.schema.json",
   "title": "Logic education events collection",
   "type": "object",
   "additionalProperties": false,
@@ -12,7 +12,7 @@
     "events": {
       "type": "array",
       "items": {
-        "$ref": "https://logic-education-resources.example/schema/event.schema.json"
+        "$ref": "https://commission-on-logic-education.example/schema/event.schema.json"
       }
     }
   }

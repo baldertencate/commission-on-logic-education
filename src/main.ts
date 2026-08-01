@@ -30,7 +30,7 @@ type Catalogue = {
   resources: Resource[];
 };
 
-const repositoryUrl = "https://github.com/baldertencate/logic-education-resources";
+const repositoryUrl = "https://github.com/baldertencate/commission-on-logic-education";
 const searchInput = getElement<HTMLInputElement>("resource-search");
 const clearButton = getElement<HTMLButtonElement>("clear-search");
 const emptyClearButton = getElement<HTMLButtonElement>("empty-clear");
