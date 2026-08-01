@@ -1,0 +1,36 @@
+id: test-tool
+title: Test tool
+url: https://baldertencate.github.io/logic-education-resources/
+description: "**TEST** _TEST_"
+maintainerEmail: github.disgrace146@passmail.net
+features:
+  - test
+  - test
+  - test
+types:
+  - website
+  - slides
+  - solver
+topics:
+  - proof-theory
+  - predicate-logic
+  - temporal-logic
+languages:
+  - en
+audiences:
+  - researchers
+  - graduate
+  - school
+authors:
+  - Author TEST
+access:
+  cost: free
+  mode:
+    - online
+  requiresSoftware: false
+  registration: false
+status: active
+provenance:
+  - sourceUrl: https://github.com/baldertencate/logic-education-resources/issues/9
+    sourceSection: Community suggestion
+    importedAt: 2026-07-30
