@@ -406,15 +406,6 @@ select {
   vertical-align: top;
 }
 
-.member-table thead th {
-  color: var(--muted);
-  background: #f4f1e9;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .member-table tbody th {
   width: 36%;
   color: var(--navy);
