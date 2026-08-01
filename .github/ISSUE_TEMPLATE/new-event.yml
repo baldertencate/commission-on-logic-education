@@ -12,7 +12,7 @@ body:
 
         This form is intended for adding one event. For changes to existing events, multiple
         records, or the schema, please
-        [manually create a pull request](https://github.com/baldertencate/logic-education-resources/blob/main/CONTRIBUTING.md).
+        [manually create a pull request](https://github.com/baldertencate/commission-on-logic-education/blob/main/CONTRIBUTING.md).
   - type: input
     id: title
     attributes:

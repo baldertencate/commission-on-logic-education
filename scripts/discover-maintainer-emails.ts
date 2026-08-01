@@ -40,7 +40,7 @@ const EXCLUDED_LOCAL_PART = /^(?:no-?reply|do-?not-?reply|privacy|abuse|security
 const EXCLUDED_DOMAIN_ENDING = /\.(?:png|jpe?g|gif|svg|webp|css|js)$/i;
 const DEFAULT_OUTPUT = "private/maintainer-email-candidates.csv";
 const USER_AGENT =
-  "logic-education-resources-maintainer-discovery/1.0 (+https://github.com/baldertencate/logic-education-resources)";
+  "commission-on-logic-education-maintainer-discovery/1.0 (+https://github.com/baldertencate/commission-on-logic-education)";
 const MAX_HTML_BYTES = 2_000_000;
 
 function normalizedHost(value: string): string {

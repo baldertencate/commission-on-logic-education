@@ -7,7 +7,7 @@ type EventsCollection = {
   events: EventRecord[];
 };
 
-const repositoryUrl = "https://github.com/baldertencate/logic-education-resources";
+const repositoryUrl = "https://github.com/baldertencate/commission-on-logic-education";
 const upcomingList = getElement<HTMLDivElement>("upcoming-events");
 const pastList = getElement<HTMLDivElement>("past-events");
 const upcomingCount = getElement<HTMLParagraphElement>("upcoming-count");
