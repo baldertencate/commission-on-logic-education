@@ -364,6 +364,29 @@ select {
   line-height: 1.6;
 }
 
+.mission-copy {
+  max-width: 940px;
+}
+
+.mission-copy p {
+  margin: 14px 0 0;
+  color: #43505a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.mission-copy a {
+  color: var(--navy-light);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.mission-copy a:hover,
+.mission-copy a:focus-visible {
+  color: var(--accent);
+}
+
 .member-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
