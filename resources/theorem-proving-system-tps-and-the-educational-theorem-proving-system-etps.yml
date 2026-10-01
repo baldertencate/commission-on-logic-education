@@ -40,5 +40,6 @@ provenance:
     sourceExternalSoftware: Yes
     importedAt: 2026-07-28
 review:
-  needsReview: false
-  issues: []
+  needsReview: true
+  issues:
+    - "URL audit: https://gtps.math.cmu.edu/tps-about.html appears stale (the hostname does not exist)."
